@@ -1,21 +1,22 @@
-#include <tomato_plant.h>
+#include <cucumber_plant.h>
 #include <vector>
 
 
-void Tomato::grow(int days){
+void Cucumber::grow(int days){
     height = height + ( days * growth_rate );
     setSize({5.0,height});
 }
 
-sf::CircleShape Tomato::fruit(sf::Vector2f offset){
+sf::CircleShape Cucumber::fruit(sf::Vector2f offset){
     sf::CircleShape fruit(10.0);
-    fruit.setFillColor(sf::Color({240,64,32}));
+    fruit.setScale(1,3);
+    fruit.setFillColor(sf::Color({32,64,32}));
     fruit.setPosition(this->getPosition()+offset);
-    num_tomatoes = num_tomatoes +1.0;
+    num_cucumber += 1;
     return fruit;
 }
 
-sf::RectangleShape Tomato::branch(int rotation, sf::Vector2f offset){
+sf::RectangleShape Cucumber::branch(int rotation, sf::Vector2f offset){
    sf::RectangleShape branch({5.0,50});
    branch.setFillColor(sf::Color({82, 136, 84}));
    branch.setPosition(this->getPosition()+offset);
@@ -23,13 +24,13 @@ sf::RectangleShape Tomato::branch(int rotation, sf::Vector2f offset){
    return branch;
 }
 
-double Tomato::getNumOfFruits(){
-    num_tomatoes = ( (int)height / 50 ) + 1;
-    return num_tomatoes; 
+double Cucumber::getNumOfFruits(){
+    num_cucumber =( (int)height / 50 ) + 1;
+    return num_cucumber; 
 }
-Tomato::Tomato(float x, float y){
-    setPosition(sf::Vector2f{x,y});
-    height=98.0;
+Cucumber::Cucumber(float x, float y){
+    setPosition(sf::Vector2f{x,y});    
+    height=50.0;
     setSize({5.0,height});
     setFillColor(sf::Color({82, 136, 84}));
     setRotation(180);

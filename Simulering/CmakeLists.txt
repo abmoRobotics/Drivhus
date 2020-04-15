@@ -13,7 +13,8 @@ include_directories(include
                     libs/imgui-sfml
                     libs/imgui)
 add_executable(Tomato_example src/Tomato_example.cpp
-                             src/Tomato.cpp)
+                             src/Tomato.cpp
+                             src/Cucumber.cpp)
 
 
 target_link_libraries(Tomato_example sfml-graphics sfml-system ImGui-SFML::ImGui-SFML)
