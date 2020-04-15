@@ -116,19 +116,19 @@
 			[
 				{
 					"backtrace" : 7,
-					"path" : "C:/Users/anton/Google Drev/Andet/Uni(Drev)/2. Semester/SSP/3. Øvelser/SSP_greenhouseWorkshop1/libs/SFML/include"
+					"path" : "C:/Users/anton/Documents/GitHub/drivhus/Simulering/libs/SFML/include"
 				},
 				{
 					"backtrace" : 7,
-					"path" : "C:/Users/anton/Google Drev/Andet/Uni(Drev)/2. Semester/SSP/3. Øvelser/SSP_greenhouseWorkshop1/libs/SFML/src"
+					"path" : "C:/Users/anton/Documents/GitHub/drivhus/Simulering/libs/SFML/src"
 				},
 				{
 					"backtrace" : 8,
-					"path" : "C:/Users/anton/Google Drev/Andet/Uni(Drev)/2. Semester/SSP/3. Øvelser/SSP_greenhouseWorkshop1/libs/SFML/extlibs/headers/AL"
+					"path" : "C:/Users/anton/Documents/GitHub/drivhus/Simulering/libs/SFML/extlibs/headers/AL"
 				},
 				{
 					"backtrace" : 4,
-					"path" : "C:/Users/anton/Google Drev/Andet/Uni(Drev)/2. Semester/SSP/3. Øvelser/SSP_greenhouseWorkshop1/libs/SFML/extlibs/headers"
+					"path" : "C:/Users/anton/Documents/GitHub/drivhus/Simulering/libs/SFML/extlibs/headers"
 				}
 			],
 			"language" : "CXX",

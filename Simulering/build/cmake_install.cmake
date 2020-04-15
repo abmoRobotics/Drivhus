@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/anton/Google Drev/Andet/Uni(Drev)/2. Semester/SSP/3. Øvelser/SSP_greenhouseWorkshop1
+# Install script for directory: C:/Users/anton/Documents/GitHub/drivhus/Simulering
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,12 +34,12 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/anton/Google Drev/Andet/Uni(Drev)/2. Semester/SSP/3. Øvelser/SSP_greenhouseWorkshop1/build/libs/SFML/cmake_install.cmake")
+  include("C:/Users/anton/Documents/GitHub/drivhus/Simulering/build/libs/SFML/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/anton/Google Drev/Andet/Uni(Drev)/2. Semester/SSP/3. Øvelser/SSP_greenhouseWorkshop1/build/libs/imgui-sfml/cmake_install.cmake")
+  include("C:/Users/anton/Documents/GitHub/drivhus/Simulering/build/libs/imgui-sfml/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/anton/Google Drev/Andet/Uni(Drev)/2. Semester/SSP/3. Øvelser/SSP_greenhouseWorkshop1/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/anton/Documents/GitHub/drivhus/Simulering/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

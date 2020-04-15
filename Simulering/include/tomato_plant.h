@@ -1,18 +1,23 @@
 #pragma once
-
+#include "SFML/Graphics.hpp"
+#include "imgui.h"
+#include "imgui-SFML.h"
 #include "plant_base.h"
 
 
 
-class Tomato : public PlantBase
+class Tomato : public PlantBase, public sf::RectangleShape
 {
 private:
-    double height = 0.0;
+    float height = 0.0;
     double num_tomatoes = 0.0;
-    double growth_rate = 2.0;
+    double growth_rate = 10.0;
 public:
    double getHeight() override {return height;};
    void grow(int days) override;
+   void simulateday(int days) override;
+   sf::CircleShape fruit();
 
+    Tomato();
 };
 

@@ -111,3 +111,116 @@ Run Build Command(s):C:/PROGRA~2/MICROS~1/2019/ENTERP~1/Common7/IDE/COMMON~1/MIC
 
 
 
+The system is: Windows - 10.0.18362 - AMD64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/VC/Tools/MSVC/14.23.28105/bin/Hostx64/x64/cl.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+Microsoft (R) C/C++ Optimizing Compiler Version 19.23.28106.4 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+CMakeCCompilerId.c
+Microsoft (R) Incremental Linker Version 14.23.28106.4
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/out:CMakeCCompilerId.exe 
+CMakeCCompilerId.obj 
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.exe"
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.obj"
+
+The C compiler identification is MSVC, found in "C:/Users/anton/Documents/GitHub/drivhus/Simulering/build/CMakeFiles/3.17.0-rc3/CompilerIdC/CMakeCCompilerId.exe"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/VC/Tools/MSVC/14.23.28105/bin/Hostx64/x64/cl.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+Microsoft (R) C/C++ Optimizing Compiler Version 19.23.28106.4 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+CMakeCXXCompilerId.cpp
+Microsoft (R) Incremental Linker Version 14.23.28106.4
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/out:CMakeCXXCompilerId.exe 
+CMakeCXXCompilerId.obj 
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.exe"
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.obj"
+
+The CXX compiler identification is MSVC, found in "C:/Users/anton/Documents/GitHub/drivhus/Simulering/build/CMakeFiles/3.17.0-rc3/CompilerIdCXX/CMakeCXXCompilerId.exe"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: C:/Users/anton/Documents/GitHub/drivhus/Simulering/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/PROGRA~2/MICROS~1/2019/ENTERP~1/Common7/IDE/COMMON~1/MICROS~1/CMake/Ninja/ninja.exe cmTC_ccb07 && [1/2] Building C object CMakeFiles\cmTC_ccb07.dir\testCCompiler.c.obj
+[2/2] Linking C executable cmTC_ccb07.exe
+
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: C:/Users/anton/Documents/GitHub/drivhus/Simulering/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/PROGRA~2/MICROS~1/2019/ENTERP~1/Common7/IDE/COMMON~1/MICROS~1/CMake/Ninja/ninja.exe cmTC_7ead5 && [1/2] Building C object CMakeFiles\cmTC_7ead5.dir\CMakeCCompilerABI.c.obj
+[2/2] Linking C executable cmTC_7ead5.exe
+
+
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: C:/Users/anton/Documents/GitHub/drivhus/Simulering/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/PROGRA~2/MICROS~1/2019/ENTERP~1/Common7/IDE/COMMON~1/MICROS~1/CMake/Ninja/ninja.exe cmTC_29c06 && [1/2] Building CXX object CMakeFiles\cmTC_29c06.dir\testCXXCompiler.cxx.obj
+[2/2] Linking CXX executable cmTC_29c06.exe
+
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: C:/Users/anton/Documents/GitHub/drivhus/Simulering/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/PROGRA~2/MICROS~1/2019/ENTERP~1/Common7/IDE/COMMON~1/MICROS~1/CMake/Ninja/ninja.exe cmTC_0e6df && [1/2] Building CXX object CMakeFiles\cmTC_0e6df.dir\CMakeCXXCompilerABI.cpp.obj
+[2/2] Linking CXX executable cmTC_0e6df.exe
+
+
+
+Determining if the include file sys/types.h exists passed with the following output:
+Change Dir: C:/Users/anton/Documents/GitHub/drivhus/Simulering/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/PROGRA~2/MICROS~1/2019/ENTERP~1/Common7/IDE/COMMON~1/MICROS~1/CMake/Ninja/ninja.exe cmTC_497fe && [1/2] Building C object CMakeFiles\cmTC_497fe.dir\CheckIncludeFile.c.obj
+[2/2] Linking C executable cmTC_497fe.exe
+
+
+
+Determining if the include file stdint.h exists passed with the following output:
+Change Dir: C:/Users/anton/Documents/GitHub/drivhus/Simulering/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/PROGRA~2/MICROS~1/2019/ENTERP~1/Common7/IDE/COMMON~1/MICROS~1/CMake/Ninja/ninja.exe cmTC_eff1e && [1/2] Building C object CMakeFiles\cmTC_eff1e.dir\CheckIncludeFile.c.obj
+[2/2] Linking C executable cmTC_eff1e.exe
+
+
+
+Determining if the include file stddef.h exists passed with the following output:
+Change Dir: C:/Users/anton/Documents/GitHub/drivhus/Simulering/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/PROGRA~2/MICROS~1/2019/ENTERP~1/Common7/IDE/COMMON~1/MICROS~1/CMake/Ninja/ninja.exe cmTC_8cce3 && [1/2] Building C object CMakeFiles\cmTC_8cce3.dir\CheckIncludeFile.c.obj
+[2/2] Linking C executable cmTC_8cce3.exe
+
+
+
+Determining size of void* passed with the following output:
+Change Dir: C:/Users/anton/Documents/GitHub/drivhus/Simulering/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/PROGRA~2/MICROS~1/2019/ENTERP~1/Common7/IDE/COMMON~1/MICROS~1/CMake/Ninja/ninja.exe cmTC_074cd && [1/2] Building C object CMakeFiles\cmTC_074cd.dir\SIZEOF_VOID_PTR.c.obj
+[2/2] Linking C executable cmTC_074cd.exe
+
+
+

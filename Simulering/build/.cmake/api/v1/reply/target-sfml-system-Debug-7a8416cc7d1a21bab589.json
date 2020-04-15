@@ -102,11 +102,11 @@
 			[
 				{
 					"backtrace" : 7,
-					"path" : "C:/Users/anton/Google Drev/Andet/Uni(Drev)/2. Semester/SSP/3. Øvelser/SSP_greenhouseWorkshop1/libs/SFML/include"
+					"path" : "C:/Users/anton/Documents/GitHub/drivhus/Simulering/libs/SFML/include"
 				},
 				{
 					"backtrace" : 7,
-					"path" : "C:/Users/anton/Google Drev/Andet/Uni(Drev)/2. Semester/SSP/3. Øvelser/SSP_greenhouseWorkshop1/libs/SFML/src"
+					"path" : "C:/Users/anton/Documents/GitHub/drivhus/Simulering/libs/SFML/src"
 				}
 			],
 			"language" : "CXX",

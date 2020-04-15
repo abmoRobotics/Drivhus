@@ -96,15 +96,15 @@
 			[
 				{
 					"backtrace" : 6,
-					"path" : "C:/Users/anton/Google Drev/Andet/Uni(Drev)/2. Semester/SSP/3. Øvelser/SSP_greenhouseWorkshop1/libs/imgui"
+					"path" : "C:/Users/anton/Documents/GitHub/drivhus/Simulering/libs/imgui"
 				},
 				{
 					"backtrace" : 6,
-					"path" : "C:/Users/anton/Google Drev/Andet/Uni(Drev)/2. Semester/SSP/3. Øvelser/SSP_greenhouseWorkshop1/libs/imgui-sfml"
+					"path" : "C:/Users/anton/Documents/GitHub/drivhus/Simulering/libs/imgui-sfml"
 				},
 				{
 					"backtrace" : 3,
-					"path" : "C:/Users/anton/Google Drev/Andet/Uni(Drev)/2. Semester/SSP/3. Øvelser/SSP_greenhouseWorkshop1/libs/SFML/include"
+					"path" : "C:/Users/anton/Documents/GitHub/drivhus/Simulering/libs/SFML/include"
 				}
 			],
 			"language" : "CXX",

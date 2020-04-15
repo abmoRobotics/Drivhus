@@ -173,7 +173,7 @@ rule CXX_SHARED_LIBRARY_LINKER__ImGui-SFML_Debug
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -S"C:\Users\anton\Google Drev\Andet\Uni(Drev)\2. Semester\SSP\3. Øvelser\SSP_greenhouseWorkshop1" -B"C:\Users\anton\Google Drev\Andet\Uni(Drev)\2. Semester\SSP\3. Øvelser\SSP_greenhouseWorkshop1\build"
+  command = "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\anton\Documents\GitHub\drivhus\Simulering -BC:\Users\anton\Documents\GitHub\drivhus\Simulering\build
   description = Re-running CMake...
   generator = 1
 
