@@ -27,6 +27,8 @@ sf::CircleShape Melon::fruit(sf::Vector2f offset)
     sf::CircleShape fruit(radiusMelon);
     //fruit.setFillColor(sf::Color({240, 64, 32}));
     fruit.setPosition(this->getPosition() + offset);
+    texture.loadFromFile("melon.png");
+    fruit.setTexture(&texture);
     num_Melon = num_Melon + 1.0;
 
 
@@ -69,11 +71,7 @@ void Melon::draw(sf::RenderWindow &window)
     int rotatation = -90;
 
     //Draw fruits on the Melon plant.
-     sf::Texture texture;
-    texture.loadFromFile("melon.png");
-    sf::CircleShape frutti = fruit(fruitOffset);
-    frutti.setTexture(&texture);
-    window.draw(frutti);
+    window.draw(fruit(fruitOffset));
     //window.draw(fruit(fruitOffset).setTexture());
     //Draw branches on the Melon plant.
     std::vector<sf::RectangleShape> drawBranch = branch(branchOffset, rotatation);

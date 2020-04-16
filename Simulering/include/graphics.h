@@ -1,6 +1,7 @@
 #pragma once
-#include "cucumber_plant.h"
-#include "tomato_plant.h"
+#include "Cucumber.h"
+#include "Tomato.h"
+#include "Melon.h"
 class Graphics
 {
 private:

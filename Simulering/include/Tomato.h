@@ -9,6 +9,7 @@ private:
     float height = 0.0;
     double num_tomatoes = 0.0;
     double growth_rate = 10.0;
+    sf::Texture texture;
 public:
    double getHeight() override {return height;};
    double getNumOfFruits() override;

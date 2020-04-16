@@ -1,4 +1,4 @@
-#include <tomato_plant.h>
+#include <Tomato.h>
 #include <vector>
 
 
@@ -12,6 +12,8 @@ sf::CircleShape Tomato::fruit(sf::Vector2f offset){
     sf::CircleShape fruit(10.0);
     fruit.setFillColor(sf::Color({240,64,32}));
     fruit.setPosition(this->getPosition()+offset);
+    texture.loadFromFile("tomat.png");
+    fruit.setTexture(&texture);
     num_tomatoes = num_tomatoes +1.0;
     return fruit;
 }
@@ -54,12 +56,7 @@ void Tomato::draw(sf::RenderWindow &window){
         //Draw branches on the tomato plant.
         window.draw( branch( branchOffset , rotatation ) );
         //Draw fruits on the tomato plant.
-        sf::CircleShape frutti;
-        frutti =  fruit( fruitOffset );
-        sf::Texture texture;
-        texture.loadFromFile("tomat.png");
-        frutti.setTexture(&texture);
-        window.draw(frutti);
+        window.draw(fruit(fruitOffset));
     }
     
 

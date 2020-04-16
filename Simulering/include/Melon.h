@@ -11,6 +11,7 @@ private:
     float lengthBranch = 0.0;
     double num_Melon = 0.0;
     double growth_rate = 1.0;
+    sf::Texture texture;
 public:
    double getHeight() override {return radiusMelon;};
    double getNumOfFruits() override;

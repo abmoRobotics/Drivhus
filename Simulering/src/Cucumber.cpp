@@ -1,4 +1,4 @@
-#include <cucumber_plant.h>
+#include <Cucumber.h>
 #include <vector>
 
 
@@ -13,6 +13,8 @@ sf::CircleShape Cucumber::fruit(sf::Vector2f offset){
     fruit.setScale(1,3);
     fruit.setFillColor(sf::Color({32,64,32}));
     fruit.setPosition(this->getPosition()+offset);
+    texture.loadFromFile("agurk.png");
+    fruit.setTexture(&texture); 
     num_cucumber += 1;
     return fruit;
 }
@@ -55,14 +57,8 @@ void Cucumber::draw(sf::RenderWindow &window){
         //Invert direction
         draw_direction = !draw_direction;
         //Draw fruits on the tomato plant.
-        sf::CircleShape frutti = fruit(fruitOffset);
-        //frutti.setFillColor(sf::Color::Transparent);
-        sf::Texture texture;
-        texture.loadFromFile("agurk.png");
-        frutti.setTexture(&texture);
-        //Draw branches on the tomato plant.
         window.draw( branch( branchOffset , rotatation ) );
-        window.draw(frutti);
+        window.draw(fruit(fruitOffset));
     }
 }
 

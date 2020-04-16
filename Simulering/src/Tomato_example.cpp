@@ -1,5 +1,5 @@
-#include "tomato_plant.h"
-#include "cucumber_plant.h"
+#include "Tomato.h"
+#include "Cucumber.h"
 #include "Melon.h"
 #include "graphics.h"
 #include <iostream>
