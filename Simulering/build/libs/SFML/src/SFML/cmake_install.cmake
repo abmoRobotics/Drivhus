@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/anton/Documents/GitHub/drivhus/Simulering/libs/SFML/src/SFML
+# Install script for directory: E:/Mine Ting/Google Drev/GitSSP/Drivhus/Simulering/libs/SFML/src/SFML
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,12 +34,12 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/anton/Documents/GitHub/drivhus/Simulering/build/libs/SFML/src/SFML/System/cmake_install.cmake")
-  include("C:/Users/anton/Documents/GitHub/drivhus/Simulering/build/libs/SFML/src/SFML/Main/cmake_install.cmake")
-  include("C:/Users/anton/Documents/GitHub/drivhus/Simulering/build/libs/SFML/src/SFML/Window/cmake_install.cmake")
-  include("C:/Users/anton/Documents/GitHub/drivhus/Simulering/build/libs/SFML/src/SFML/Network/cmake_install.cmake")
-  include("C:/Users/anton/Documents/GitHub/drivhus/Simulering/build/libs/SFML/src/SFML/Graphics/cmake_install.cmake")
-  include("C:/Users/anton/Documents/GitHub/drivhus/Simulering/build/libs/SFML/src/SFML/Audio/cmake_install.cmake")
+  include("E:/Mine Ting/Google Drev/GitSSP/Drivhus/Simulering/build/libs/SFML/src/SFML/System/cmake_install.cmake")
+  include("E:/Mine Ting/Google Drev/GitSSP/Drivhus/Simulering/build/libs/SFML/src/SFML/Main/cmake_install.cmake")
+  include("E:/Mine Ting/Google Drev/GitSSP/Drivhus/Simulering/build/libs/SFML/src/SFML/Window/cmake_install.cmake")
+  include("E:/Mine Ting/Google Drev/GitSSP/Drivhus/Simulering/build/libs/SFML/src/SFML/Network/cmake_install.cmake")
+  include("E:/Mine Ting/Google Drev/GitSSP/Drivhus/Simulering/build/libs/SFML/src/SFML/Graphics/cmake_install.cmake")
+  include("E:/Mine Ting/Google Drev/GitSSP/Drivhus/Simulering/build/libs/SFML/src/SFML/Audio/cmake_install.cmake")
 
 endif()
 

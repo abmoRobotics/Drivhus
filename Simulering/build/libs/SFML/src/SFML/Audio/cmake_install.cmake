@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/anton/Documents/GitHub/drivhus/Simulering/libs/SFML/src/SFML/Audio
+# Install script for directory: E:/Mine Ting/Google Drev/GitSSP/Drivhus/Simulering/libs/SFML/src/SFML/Audio
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -33,10 +33,10 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xdevelx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY OPTIONAL FILES "C:/Users/anton/Documents/GitHub/drivhus/Simulering/build/libs/SFML/lib/sfml-audio-d.lib")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY OPTIONAL FILES "E:/Mine Ting/Google Drev/GitSSP/Drivhus/Simulering/build/libs/SFML/lib/sfml-audio-d.lib")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xbinx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE SHARED_LIBRARY FILES "C:/Users/anton/Documents/GitHub/drivhus/Simulering/build/libs/SFML/lib/sfml-audio-d-2.dll")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE SHARED_LIBRARY FILES "E:/Mine Ting/Google Drev/GitSSP/Drivhus/Simulering/build/libs/SFML/lib/sfml-audio-d-2.dll")
 endif()
 

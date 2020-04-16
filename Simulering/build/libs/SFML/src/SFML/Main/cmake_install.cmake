@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/anton/Documents/GitHub/drivhus/Simulering/libs/SFML/src/SFML/Main
+# Install script for directory: E:/Mine Ting/Google Drev/GitSSP/Drivhus/Simulering/libs/SFML/src/SFML/Main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -33,6 +33,6 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xdevelx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/Users/anton/Documents/GitHub/drivhus/Simulering/build/libs/SFML/lib/sfml-main-d.lib")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "E:/Mine Ting/Google Drev/GitSSP/Drivhus/Simulering/build/libs/SFML/lib/sfml-main-d.lib")
 endif()
 
