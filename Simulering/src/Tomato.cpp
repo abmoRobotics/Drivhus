@@ -50,11 +50,16 @@ void Tomato::draw(sf::RenderWindow &window){
         }
         //Invert direction
         draw_direction = !draw_direction;
-        //Draw fruits on the tomato plant.
-        window.draw( fruit( fruitOffset ) );
+        
         //Draw branches on the tomato plant.
         window.draw( branch( branchOffset , rotatation ) );
-        
+        //Draw fruits on the tomato plant.
+        sf::CircleShape frutti;
+        frutti =  fruit( fruitOffset );
+        sf::Texture texture;
+        texture.loadFromFile("tomat.png");
+        frutti.setTexture(&texture);
+        window.draw(frutti);
     }
     
 

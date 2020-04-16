@@ -9,7 +9,7 @@ void Cucumber::grow(int days){
 
 //Shape of the fruits on the cucumber plant
 sf::CircleShape Cucumber::fruit(sf::Vector2f offset){
-    sf::CircleShape fruit(10.0);
+    sf::CircleShape fruit(13.0);
     fruit.setScale(1,3);
     fruit.setFillColor(sf::Color({32,64,32}));
     fruit.setPosition(this->getPosition()+offset);
@@ -55,10 +55,14 @@ void Cucumber::draw(sf::RenderWindow &window){
         //Invert direction
         draw_direction = !draw_direction;
         //Draw fruits on the tomato plant.
-        window.draw( fruit( fruitOffset ) );
+        sf::CircleShape frutti = fruit(fruitOffset);
+        //frutti.setFillColor(sf::Color::Transparent);
+        sf::Texture texture;
+        texture.loadFromFile("agurk.png");
+        frutti.setTexture(&texture);
         //Draw branches on the tomato plant.
         window.draw( branch( branchOffset , rotatation ) );
-        
+        window.draw(frutti);
     }
 }
 
