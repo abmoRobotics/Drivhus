@@ -1,25 +1,22 @@
-#include "tomato_plant.h"
-#include "cucumber_plant.h"
 #include "graphics.h"
-#include <iostream>
 
-int main(int argc, char const *argv[])
+Graphics::Graphics() : window(sf::VideoMode(1280, 720), "Tomato Simulator")
 {
 
-    //Defines a vector consisting of pointers of type "PlantBase"
-
-    std::vector<PlantBase> f;
-
-
-    std::vector<std::shared_ptr<PlantBase>> greenhouse;
-
-    //Pushes pointer into greenhouse - respresenting tomatos and cucumbers
     greenhouse.push_back(std::make_shared<Tomato>(100.0F, 720.0F));
     greenhouse.push_back(std::make_shared<Tomato>(200.0F, 720.0F));
     greenhouse.push_back(std::make_shared<Cucumber>(300.0F, 720.0F));
 
+    standardGraphics();
+}
+
+Graphics::~Graphics()
+{
+}
+//This function contains only the standard setup of SFML and IMGUI, with the exception of one line calling the custom graphics for the project.
+void Graphics::standardGraphics()
+{
     // create the window
-    sf::RenderWindow window(sf::VideoMode(1280, 720), "Tomato Simulator");
     window.setFramerateLimit(60);
     ImGui::SFML::Init(window);
 
@@ -38,27 +35,10 @@ int main(int argc, char const *argv[])
         }
         ImGui::SFML::Update(window, deltaClock.restart());
         ImGui::SetNextItemWidth(100.0);
-
         // clear the window with black color
         window.clear(sf::Color::Black);
 
-        //Create dialog box
-        ImGui::Begin("Hello, world");
-        //Button
-        if (ImGui::Button("GROW THANKS", {100.0, 20.0}))
-        {
-            for (size_t i = 0; i < greenhouse.size(); i++)
-                greenhouse[i]->grow(2);
-        }
-        ImGui::End();
-        /**********************************************************************
-        *                              Graphics
-        * *********************************************************************/
-
-        for (size_t i = 0; i < greenhouse.size(); i++)
-        {
-            greenhouse[i]->draw(window);
-        }
+        customGraphics();
 
         ImGui::SFML::Render(window);
         // end the current frame
@@ -66,4 +46,20 @@ int main(int argc, char const *argv[])
     }
 }
 
+void Graphics::customGraphics()
+{
+    //Create dialog box
+    ImGui::Begin("Hello, world");
+    //Button
+    if (ImGui::Button("GROW THANKS", {100.0, 20.0}))
+    {
+        for (size_t i = 0; i < greenhouse.size(); i++)
+            greenhouse[i]->grow(2);
+    }
+    ImGui::End();
 
+    for (size_t i = 0; i < greenhouse.size(); i++)
+    {
+        greenhouse[i]->draw(window);
+    }
+}

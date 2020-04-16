@@ -13,8 +13,9 @@ public:
    double getHeight() override {return height;};
    double getNumOfFruits() override;
    void grow(int days) override;
-   sf::CircleShape fruit(sf::Vector2f offset) override;
-   sf::RectangleShape branch(int rotation, sf::Vector2f offset) override;
+   void draw(sf::RenderWindow &window) override;
+   sf::CircleShape fruit(sf::Vector2f offset) ;
+   sf::RectangleShape branch(sf::Vector2f offset, int rotation) ;
 
     Tomato(float,float);
 };
