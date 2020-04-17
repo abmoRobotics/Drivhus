@@ -75,7 +75,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -MDd  "
+					"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /O2 /Ob2 /DNDEBUG -MD  "
 				}
 			],
 			"defines" : 
@@ -96,15 +96,15 @@
 			[
 				{
 					"backtrace" : 6,
-					"path" : "E:/Mine Ting/Google Drev/GitSSP/Drivhus/Simulering/libs/imgui"
+					"path" : "C:/Users/anton/Documents/GitHub/drivhus/Simulering/libs/imgui"
 				},
 				{
 					"backtrace" : 6,
-					"path" : "E:/Mine Ting/Google Drev/GitSSP/Drivhus/Simulering/libs/imgui-sfml"
+					"path" : "C:/Users/anton/Documents/GitHub/drivhus/Simulering/libs/imgui-sfml"
 				},
 				{
 					"backtrace" : 3,
-					"path" : "E:/Mine Ting/Google Drev/GitSSP/Drivhus/Simulering/libs/SFML/include"
+					"path" : "C:/Users/anton/Documents/GitHub/drivhus/Simulering/libs/SFML/include"
 				}
 			],
 			"language" : "CXX",
@@ -126,11 +126,11 @@
 		},
 		{
 			"backtrace" : 3,
-			"id" : "sfml-graphics::@a0e6144642577840cf67"
+			"id" : "sfml-window::@b3059e65f89605c2b3d3"
 		},
 		{
 			"backtrace" : 3,
-			"id" : "sfml-window::@b3059e65f89605c2b3d3"
+			"id" : "sfml-graphics::@a0e6144642577840cf67"
 		}
 	],
 	"id" : "ImGui-SFML::@fc265e6b6c96c32461a1",
@@ -157,17 +157,17 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "/machine:x64 /debug /INCREMENTAL",
+				"fragment" : "/machine:x64 /INCREMENTAL:NO",
 				"role" : "flags"
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "..\\SFML\\lib\\sfml-graphics-d.lib",
+				"fragment" : "..\\SFML\\lib\\sfml-graphics.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "..\\SFML\\lib\\sfml-window-d.lib",
+				"fragment" : "..\\SFML\\lib\\sfml-window.lib",
 				"role" : "libraries"
 			},
 			{
@@ -182,7 +182,7 @@
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "..\\SFML\\lib\\sfml-system-d.lib",
+				"fragment" : "..\\SFML\\lib\\sfml-system.lib",
 				"role" : "libraries"
 			},
 			{

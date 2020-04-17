@@ -2,13 +2,13 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "libs/SFML/lib/sfml-audio-d-2.dll"
+			"path" : "libs/SFML/lib/sfml-audio-2.dll"
 		},
 		{
-			"path" : "libs/SFML/lib/sfml-audio-d.lib"
+			"path" : "libs/SFML/lib/sfml-audio.lib"
 		},
 		{
-			"path" : "libs/SFML/lib/sfml-audio-d.pdb"
+			"path" : "libs/SFML/lib/sfml-audio.pdb"
 		}
 	],
 	"backtrace" : 2,
@@ -87,7 +87,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -MDd  "
+					"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /O2 /Ob2 /DNDEBUG -MD  "
 				}
 			],
 			"defines" : 
@@ -116,19 +116,19 @@
 			[
 				{
 					"backtrace" : 7,
-					"path" : "E:/Mine Ting/Google Drev/GitSSP/Drivhus/Simulering/libs/SFML/include"
+					"path" : "C:/Users/anton/Documents/GitHub/drivhus/Simulering/libs/SFML/include"
 				},
 				{
 					"backtrace" : 7,
-					"path" : "E:/Mine Ting/Google Drev/GitSSP/Drivhus/Simulering/libs/SFML/src"
+					"path" : "C:/Users/anton/Documents/GitHub/drivhus/Simulering/libs/SFML/src"
 				},
 				{
 					"backtrace" : 8,
-					"path" : "E:/Mine Ting/Google Drev/GitSSP/Drivhus/Simulering/libs/SFML/extlibs/headers/AL"
+					"path" : "C:/Users/anton/Documents/GitHub/drivhus/Simulering/libs/SFML/extlibs/headers/AL"
 				},
 				{
 					"backtrace" : 4,
-					"path" : "E:/Mine Ting/Google Drev/GitSSP/Drivhus/Simulering/libs/SFML/extlibs/headers"
+					"path" : "C:/Users/anton/Documents/GitHub/drivhus/Simulering/libs/SFML/extlibs/headers"
 				}
 			],
 			"language" : "CXX",
@@ -192,12 +192,12 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "/machine:x64 /debug /INCREMENTAL",
+				"fragment" : "/machine:x64 /INCREMENTAL:NO",
 				"role" : "flags"
 			},
 			{
 				"backtrace" : 4,
-				"fragment" : "..\\..\\..\\lib\\sfml-system-d.lib",
+				"fragment" : "..\\..\\..\\lib\\sfml-system.lib",
 				"role" : "libraries"
 			},
 			{
@@ -232,7 +232,7 @@
 		"language" : "CXX"
 	},
 	"name" : "sfml-audio",
-	"nameOnDisk" : "sfml-audio-d-2.dll",
+	"nameOnDisk" : "sfml-audio-2.dll",
 	"paths" : 
 	{
 		"build" : "libs/SFML/src/SFML/Audio",

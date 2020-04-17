@@ -2,13 +2,13 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "libs/SFML/lib/sfml-network-d-2.dll"
+			"path" : "libs/SFML/lib/sfml-network-2.dll"
 		},
 		{
-			"path" : "libs/SFML/lib/sfml-network-d.lib"
+			"path" : "libs/SFML/lib/sfml-network.lib"
 		},
 		{
-			"path" : "libs/SFML/lib/sfml-network-d.pdb"
+			"path" : "libs/SFML/lib/sfml-network.pdb"
 		}
 	],
 	"backtrace" : 2,
@@ -87,7 +87,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -MDd  "
+					"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /O2 /Ob2 /DNDEBUG -MD  "
 				}
 			],
 			"defines" : 
@@ -108,11 +108,11 @@
 			[
 				{
 					"backtrace" : 8,
-					"path" : "E:/Mine Ting/Google Drev/GitSSP/Drivhus/Simulering/libs/SFML/include"
+					"path" : "C:/Users/anton/Documents/GitHub/drivhus/Simulering/libs/SFML/include"
 				},
 				{
 					"backtrace" : 8,
-					"path" : "E:/Mine Ting/Google Drev/GitSSP/Drivhus/Simulering/libs/SFML/src"
+					"path" : "C:/Users/anton/Documents/GitHub/drivhus/Simulering/libs/SFML/src"
 				}
 			],
 			"language" : "CXX",
@@ -166,12 +166,12 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "/machine:x64 /debug /INCREMENTAL",
+				"fragment" : "/machine:x64 /INCREMENTAL:NO",
 				"role" : "flags"
 			},
 			{
 				"backtrace" : 4,
-				"fragment" : "..\\..\\..\\lib\\sfml-system-d.lib",
+				"fragment" : "..\\..\\..\\lib\\sfml-system.lib",
 				"role" : "libraries"
 			},
 			{
@@ -187,7 +187,7 @@
 		"language" : "CXX"
 	},
 	"name" : "sfml-network",
-	"nameOnDisk" : "sfml-network-d-2.dll",
+	"nameOnDisk" : "sfml-network-2.dll",
 	"paths" : 
 	{
 		"build" : "libs/SFML/src/SFML/Network",

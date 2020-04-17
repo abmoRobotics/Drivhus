@@ -7,6 +7,7 @@
 #include <math.h>
 
 #define PI 3.14159265
+void dataWindow(sf::Vector2u pos, WaterReservoir &reservoir, sf::RenderWindow &window);
 
 double degtorad(double deg){
     double rad =  (deg * PI) / 180.0 ;
@@ -83,6 +84,8 @@ int main(int argc, char const *argv[])
         /**********************************************************************
         *                              Graphics
         * *********************************************************************/
+       sf::Vector2u pos {1000,50};
+        dataWindow(pos,Reservoir,window);
 
         for (size_t i = 0; i < greenhouse.size(); i++)
         {
@@ -139,7 +142,7 @@ int main(int argc, char const *argv[])
         window.draw(greenhouseDraw7);
 
         sf::RectangleShape greenhouseDraw8;
-        greenhouseDraw8.setSize({5.0F,300.0F});
+        greenhouseDraw8.setSize({5.0F,length});
         greenhouseDraw8.setRotation(180);
         greenhouseDraw8.setPosition(posx-cos(degtorad(30))*width,posy-sin(degtorad(30))*width);
         window.draw(greenhouseDraw8);
@@ -152,7 +155,7 @@ int main(int argc, char const *argv[])
         window.draw(greenhouseDraw9);
 
         sf::RectangleShape greenhouseDraw10;
-        greenhouseDraw10.setSize({5.0F,300.0F});
+        greenhouseDraw10.setSize({5.0F,length});
         greenhouseDraw10.setRotation(180);
         greenhouseDraw10.setPosition(posx-cos(degtorad(30))*width*1.5,posy-sin(degtorad(30))*width*1.5);
         window.draw(greenhouseDraw10);
@@ -182,7 +185,7 @@ int main(int argc, char const *argv[])
         window.draw(greenhouseDraw14);
 
         sf::RectangleShape greenhouseDraw15;
-        greenhouseDraw15.setSize({5.0F,height*2});
+        greenhouseDraw15.setSize({5.0F,length-height});
         greenhouseDraw15.setRotation(0);
         greenhouseDraw15.setPosition((posx-cos(degtorad(30))*width)+cos(degtorad(30))*length,((posy-sin(degtorad(30))*width)-length)-sin(degtorad(30))*length);
         window.draw(greenhouseDraw15);
@@ -198,3 +201,50 @@ int main(int argc, char const *argv[])
 }
 
 
+
+void dataWindow(sf::Vector2u pos, WaterReservoir &reservoir, sf::RenderWindow &window){
+        sf::Vector2f posFloat {(float)pos.x,(float)pos.y};
+        sf::RectangleShape rect;
+        rect.setSize({200.0F,300.0F});
+        rect.setFillColor(sf::Color::Transparent);
+        rect.setOutlineColor(sf::Color::White);
+        rect.setOutlineThickness(5.0F);
+        rect.setPosition(posFloat);
+        window.draw(rect);
+
+        sf::Font font;
+        font.loadFromFile("arial_narrow_7.ttf");
+        sf::Text text;
+        text.setFont(font);
+        text.setCharacterSize(24);
+        text.setFillColor(sf::Color::White);
+
+        text.setString("Levels");
+        text.setPosition(pos.x+70,pos.y+10);
+        window.draw(text);
+        const std::vector<char> letters = {'W','K','P','N'};
+        
+        for (int i = 0; i < letters.size(); i++)
+        {
+            int offset = 45;
+            int spacing = 40;
+            text.setString(letters[i]);
+            text.setPosition(pos.x+offset+(spacing*i)-text.getLocalBounds().width,pos.y+70);
+            window.draw(text);
+            sf::RectangleShape outerShape;
+            outerShape.setSize({21.0F,153.0F});
+            outerShape.setPosition(pos.x+offset+(spacing*i)-text.getLocalBounds().width/2-outerShape.getGlobalBounds().width/2,pos.y+110);
+            window.draw(outerShape);
+            sf::RectangleShape innerShape;
+            innerShape.setFillColor(sf::Color::Blue);
+            innerShape.setSize({15.0F,147.0F*((float)reservoir.getNutrition(letters[i]))/100.0F});
+            innerShape.setPosition(pos.x+offset+(spacing*i)-text.getLocalBounds().width/2-innerShape.getGlobalBounds().width/2,pos.y+113+147-innerShape.getGlobalBounds().height);
+            window.draw(innerShape);
+
+
+
+        }
+        
+
+
+}

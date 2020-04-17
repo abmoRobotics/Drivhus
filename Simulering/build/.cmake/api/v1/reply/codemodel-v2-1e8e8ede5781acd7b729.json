@@ -164,7 +164,7 @@
 					]
 				}
 			],
-			"name" : "Debug",
+			"name" : "Release",
 			"projects" : 
 			[
 				{
@@ -225,56 +225,56 @@
 				{
 					"directoryIndex" : 9,
 					"id" : "ImGui-SFML::@fc265e6b6c96c32461a1",
-					"jsonFile" : "target-ImGui-SFML-Debug-8607718018f0bdc21815.json",
+					"jsonFile" : "target-ImGui-SFML-Release-ee49ad8fcc6d74f7f765.json",
 					"name" : "ImGui-SFML",
 					"projectIndex" : 2
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "Tomato_example::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Tomato_example-Debug-8c023ed813bcea973301.json",
+					"jsonFile" : "target-Tomato_example-Release-ff370c5c076983add496.json",
 					"name" : "Tomato_example",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 8,
 					"id" : "sfml-audio::@cd38f782327c973a3070",
-					"jsonFile" : "target-sfml-audio-Debug-2c1c9744176c2d58f244.json",
+					"jsonFile" : "target-sfml-audio-Release-b0571c62335f885824ef.json",
 					"name" : "sfml-audio",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 7,
 					"id" : "sfml-graphics::@a0e6144642577840cf67",
-					"jsonFile" : "target-sfml-graphics-Debug-6dd302f1d19bc5c93214.json",
+					"jsonFile" : "target-sfml-graphics-Release-6cea6a78e6e0440ea404.json",
 					"name" : "sfml-graphics",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 4,
 					"id" : "sfml-main::@f7e49f7ea41ebd1de36d",
-					"jsonFile" : "target-sfml-main-Debug-ba597c82fd1186bd8fc7.json",
+					"jsonFile" : "target-sfml-main-Release-cd76dbe7b9a3a16a539a.json",
 					"name" : "sfml-main",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 6,
 					"id" : "sfml-network::@ffe47ea6c6f24b77bec9",
-					"jsonFile" : "target-sfml-network-Debug-21d7d03243610e7d9495.json",
+					"jsonFile" : "target-sfml-network-Release-035c03b9d980e1a75f25.json",
 					"name" : "sfml-network",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 3,
 					"id" : "sfml-system::@7ed332bc55ee14bc0864",
-					"jsonFile" : "target-sfml-system-Debug-3952a8a0227084890e30.json",
+					"jsonFile" : "target-sfml-system-Release-3248b0dc13f87225f89d.json",
 					"name" : "sfml-system",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 5,
 					"id" : "sfml-window::@b3059e65f89605c2b3d3",
-					"jsonFile" : "target-sfml-window-Debug-74737ab366d0e085cf9d.json",
+					"jsonFile" : "target-sfml-window-Release-3978ac6d445f5423b7d8.json",
 					"name" : "sfml-window",
 					"projectIndex" : 1
 				}
@@ -284,8 +284,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "E:/Mine Ting/Google Drev/GitSSP/Drivhus/Simulering/build",
-		"source" : "E:/Mine Ting/Google Drev/GitSSP/Drivhus/Simulering"
+		"build" : "C:/Users/anton/Documents/GitHub/drivhus/Simulering/build",
+		"source" : "C:/Users/anton/Documents/GitHub/drivhus/Simulering"
 	},
 	"version" : 
 	{

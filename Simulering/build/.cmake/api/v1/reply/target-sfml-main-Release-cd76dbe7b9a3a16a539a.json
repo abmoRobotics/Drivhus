@@ -12,7 +12,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "libs/SFML/lib/sfml-main-d.lib"
+			"path" : "libs/SFML/lib/sfml-main.lib"
 		}
 	],
 	"backtrace" : 2,
@@ -78,7 +78,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -MDd  "
+					"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /O2 /Ob2 /DNDEBUG -MD  "
 				}
 			],
 			"defines" : 
@@ -96,11 +96,11 @@
 			[
 				{
 					"backtrace" : 6,
-					"path" : "E:/Mine Ting/Google Drev/GitSSP/Drivhus/Simulering/libs/SFML/include"
+					"path" : "C:/Users/anton/Documents/GitHub/drivhus/Simulering/libs/SFML/include"
 				},
 				{
 					"backtrace" : 6,
-					"path" : "E:/Mine Ting/Google Drev/GitSSP/Drivhus/Simulering/libs/SFML/src"
+					"path" : "C:/Users/anton/Documents/GitHub/drivhus/Simulering/libs/SFML/src"
 				}
 			],
 			"language" : "CXX",
@@ -130,7 +130,7 @@
 		}
 	},
 	"name" : "sfml-main",
-	"nameOnDisk" : "sfml-main-d.lib",
+	"nameOnDisk" : "sfml-main.lib",
 	"paths" : 
 	{
 		"build" : "libs/SFML/src/SFML/Main",

@@ -1,4 +1,4 @@
-# Install script for directory: E:/Mine Ting/Google Drev/GitSSP/Drivhus/Simulering/libs/imgui-sfml
+# Install script for directory: C:/Users/anton/Documents/GitHub/drivhus/Simulering/libs/imgui-sfml
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "Debug")
+    set(CMAKE_INSTALL_CONFIG_NAME "Release")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -33,25 +33,25 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY OPTIONAL FILES "E:/Mine Ting/Google Drev/GitSSP/Drivhus/Simulering/build/libs/imgui-sfml/ImGui-SFML.lib")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY OPTIONAL FILES "C:/Users/anton/Documents/GitHub/drivhus/Simulering/build/libs/imgui-sfml/ImGui-SFML.lib")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE SHARED_LIBRARY FILES "E:/Mine Ting/Google Drev/GitSSP/Drivhus/Simulering/build/libs/imgui-sfml/ImGui-SFML.dll")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE SHARED_LIBRARY FILES "C:/Users/anton/Documents/GitHub/drivhus/Simulering/build/libs/imgui-sfml/ImGui-SFML.dll")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES
-    "E:/Mine Ting/Google Drev/GitSSP/Drivhus/Simulering/libs/imgui-sfml/imgui-SFML.h"
-    "E:/Mine Ting/Google Drev/GitSSP/Drivhus/Simulering/libs/imgui-sfml/imgui-SFML_export.h"
-    "E:/Mine Ting/Google Drev/GitSSP/Drivhus/Simulering/libs/imgui-sfml/imconfig-SFML.h"
-    "E:/Mine Ting/Google Drev/GitSSP/Drivhus/Simulering/libs/imgui/imconfig.h"
-    "E:/Mine Ting/Google Drev/GitSSP/Drivhus/Simulering/libs/imgui/imgui.h"
-    "E:/Mine Ting/Google Drev/GitSSP/Drivhus/Simulering/libs/imgui/imgui_internal.h"
-    "E:/Mine Ting/Google Drev/GitSSP/Drivhus/Simulering/libs/imgui/imstb_rectpack.h"
-    "E:/Mine Ting/Google Drev/GitSSP/Drivhus/Simulering/libs/imgui/imstb_textedit.h"
-    "E:/Mine Ting/Google Drev/GitSSP/Drivhus/Simulering/libs/imgui/imstb_truetype.h"
-    "E:/Mine Ting/Google Drev/GitSSP/Drivhus/Simulering/libs/imgui/misc/cpp/imgui_stdlib.h"
+    "C:/Users/anton/Documents/GitHub/drivhus/Simulering/libs/imgui-sfml/imgui-SFML.h"
+    "C:/Users/anton/Documents/GitHub/drivhus/Simulering/libs/imgui-sfml/imgui-SFML_export.h"
+    "C:/Users/anton/Documents/GitHub/drivhus/Simulering/libs/imgui-sfml/imconfig-SFML.h"
+    "C:/Users/anton/Documents/GitHub/drivhus/Simulering/libs/imgui/imconfig.h"
+    "C:/Users/anton/Documents/GitHub/drivhus/Simulering/libs/imgui/imgui.h"
+    "C:/Users/anton/Documents/GitHub/drivhus/Simulering/libs/imgui/imgui_internal.h"
+    "C:/Users/anton/Documents/GitHub/drivhus/Simulering/libs/imgui/imstb_rectpack.h"
+    "C:/Users/anton/Documents/GitHub/drivhus/Simulering/libs/imgui/imstb_textedit.h"
+    "C:/Users/anton/Documents/GitHub/drivhus/Simulering/libs/imgui/imstb_truetype.h"
+    "C:/Users/anton/Documents/GitHub/drivhus/Simulering/libs/imgui/misc/cpp/imgui_stdlib.h"
     )
 endif()
 
@@ -59,7 +59,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/ImGui-SFML/ImGui-SFMLConfig.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/ImGui-SFML/ImGui-SFMLConfig.cmake"
-         "E:/Mine Ting/Google Drev/GitSSP/Drivhus/Simulering/build/libs/imgui-sfml/CMakeFiles/Export/lib/cmake/ImGui-SFML/ImGui-SFMLConfig.cmake")
+         "C:/Users/anton/Documents/GitHub/drivhus/Simulering/build/libs/imgui-sfml/CMakeFiles/Export/lib/cmake/ImGui-SFML/ImGui-SFMLConfig.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/ImGui-SFML/ImGui-SFMLConfig-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -68,9 +68,9 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/ImGui-SFML" TYPE FILE FILES "E:/Mine Ting/Google Drev/GitSSP/Drivhus/Simulering/build/libs/imgui-sfml/CMakeFiles/Export/lib/cmake/ImGui-SFML/ImGui-SFMLConfig.cmake")
-  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/ImGui-SFML" TYPE FILE FILES "E:/Mine Ting/Google Drev/GitSSP/Drivhus/Simulering/build/libs/imgui-sfml/CMakeFiles/Export/lib/cmake/ImGui-SFML/ImGui-SFMLConfig-debug.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/ImGui-SFML" TYPE FILE FILES "C:/Users/anton/Documents/GitHub/drivhus/Simulering/build/libs/imgui-sfml/CMakeFiles/Export/lib/cmake/ImGui-SFML/ImGui-SFMLConfig.cmake")
+  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/ImGui-SFML" TYPE FILE FILES "C:/Users/anton/Documents/GitHub/drivhus/Simulering/build/libs/imgui-sfml/CMakeFiles/Export/lib/cmake/ImGui-SFML/ImGui-SFMLConfig-release.cmake")
   endif()
 endif()
 

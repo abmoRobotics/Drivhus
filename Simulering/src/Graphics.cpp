@@ -45,7 +45,7 @@ void Graphics::standardGraphics()
         window.display();
     }
 }
-/*
+
 void Graphics::customGraphics()
 {
     //Create dialog box
@@ -54,7 +54,7 @@ void Graphics::customGraphics()
     if (ImGui::Button("GROW THANKS", {100.0, 20.0}))
     {
         for (size_t i = 0; i < greenhouse.size(); i++)
-            greenhouse[i]->grow(2);
+            greenhouse[i]->grow(2, Reservoir);
     }
     ImGui::End();
 
@@ -63,4 +63,3 @@ void Graphics::customGraphics()
         greenhouse[i]->draw(window);
     }
 }
-*/
