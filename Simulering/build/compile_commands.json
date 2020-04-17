@@ -31,6 +31,12 @@
 
 {
   "directory": "E:/Mine Ting/Google Drev/GitSSP/Drivhus/Simulering/build",
+  "command": "C:\\PROGRA~2\\MICROS~1\\2019\\BUILDT~1\\VC\\Tools\\MSVC\\1425~1.286\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DIMGUI_USER_CONFIG=\\\"imconfig-SFML.h\\\" -I..\\include -I..\\libs\\SFML\\INCLUDE -I..\\libs\\imgui-sfml -I..\\libs\\imgui -I..\\libs\\SFML\\include  /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -MDd   /FoCMakeFiles\\Tomato_example.dir\\src\\Reservoir.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"E:\\Mine Ting\\Google Drev\\GitSSP\\Drivhus\\Simulering\\src\\Reservoir.cpp\"",
+  "file": "E:/Mine Ting/Google Drev/GitSSP/Drivhus/Simulering/src/Reservoir.cpp"
+},
+
+{
+  "directory": "E:/Mine Ting/Google Drev/GitSSP/Drivhus/Simulering/build",
   "command": "C:\\PROGRA~2\\MICROS~1\\2019\\BUILDT~1\\VC\\Tools\\MSVC\\1425~1.286\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DSFML_SYSTEM_EXPORTS -D_CRT_SECURE_NO_DEPRECATE -D_SCL_SECURE_NO_WARNINGS -I..\\libs\\SFML\\include -I..\\libs\\SFML\\src  /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -MDd   /Folibs\\SFML\\src\\SFML\\System\\CMakeFiles\\sfml-system.dir\\Clock.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"E:\\Mine Ting\\Google Drev\\GitSSP\\Drivhus\\Simulering\\libs\\SFML\\src\\SFML\\System\\Clock.cpp\"",
   "file": "E:/Mine Ting/Google Drev/GitSSP/Drivhus/Simulering/libs/SFML/src/SFML/System/Clock.cpp"
 },

@@ -4,7 +4,7 @@
 
 void Melon::grow(int days, WaterReservoir &Reservoir)
 {
-    if (heightStalk < 100)
+    if (heightStalk < 75)
     {
         heightStalk = heightStalk + (days * (float)growth_rate * (float)Reservoir.getNutrition());
         lengthBranch = lengthBranch + (days * (float)growth_rate * (float)Reservoir.getNutrition());

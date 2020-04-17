@@ -3,9 +3,12 @@
 
 
 void Cucumber::grow(int days, WaterReservoir &Reservoir){
+    if(height < 250)
+    {
     height = height + ( days * (float)growth_rate * (float)Reservoir.getNutrition());
     Reservoir.NutritionConsumption(days);
     setSize({5.0,height});
+    }
 }
 
 //Shape of the fruits on the cucumber plant
