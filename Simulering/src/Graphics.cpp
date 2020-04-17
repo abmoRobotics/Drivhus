@@ -38,14 +38,14 @@ void Graphics::standardGraphics()
         // clear the window with black color
         window.clear(sf::Color::Black);
 
-        customGraphics();
+        //customGraphics();
 
         ImGui::SFML::Render(window);
         // end the current frame
         window.display();
     }
 }
-
+/*
 void Graphics::customGraphics()
 {
     //Create dialog box
@@ -63,3 +63,4 @@ void Graphics::customGraphics()
         greenhouse[i]->draw(window);
     }
 }
+*/

@@ -2,12 +2,13 @@
 #include <vector>
 #include <iostream>
 
-void Melon::grow(int days)
+void Melon::grow(int days, WaterReservoir &Reservoir)
 {
     if (heightStalk < 100)
     {
-        heightStalk = heightStalk + (days * growth_rate);
-        lengthBranch = lengthBranch + (days * growth_rate);
+        heightStalk = heightStalk + (days * (float)growth_rate * (float)Reservoir.getNutrition());
+        lengthBranch = lengthBranch + (days * (float)growth_rate * (float)Reservoir.getNutrition());
+        Reservoir.NutritionConsumption(days);
         setSize({5.0, heightStalk});
     }
     

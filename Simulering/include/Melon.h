@@ -1,5 +1,6 @@
 #pragma once
 #include "plant_base.h"
+#include "water_reservoir.h"
 
 
 
@@ -15,7 +16,7 @@ private:
 public:
    double getHeight() override {return radiusMelon;};
    double getNumOfFruits() override;
-   void grow(int days) override;
+   void grow(int days, WaterReservoir &Reservoir) override;
    void draw(sf::RenderWindow &window) override;
    sf::CircleShape fruit(sf::Vector2f offset) ;
    std::vector<sf::RectangleShape> branch(sf::Vector2f offset, int rotation) ;

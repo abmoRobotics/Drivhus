@@ -1,5 +1,6 @@
 #pragma once
 #include "plant_base.h"
+#include "water_reservoir.h"
 
 
 
@@ -13,7 +14,7 @@ private:
 public:
    double getHeight() override {return height;};
    double getNumOfFruits() override;
-   void grow(int days) override;
+   void grow(int days, WaterReservoir &Reservoir) override;
    void draw(sf::RenderWindow &window) override;  
 
    //Function that return the shape of the fruit

@@ -10,7 +10,7 @@ private:
     sf::RenderWindow window;
 
     void standardGraphics();
-    void customGraphics();
+    //void customGraphics();
 public:
     Graphics();
     ~Graphics();

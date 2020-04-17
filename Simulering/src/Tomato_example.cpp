@@ -3,6 +3,7 @@
 #include "Melon.h"
 #include "graphics.h"
 #include <iostream>
+#include "water_reservoir.h"
 #include <math.h>
 
 #define PI 3.14159265
@@ -11,8 +12,6 @@ double degtorad(double deg){
     double rad =  (deg * PI) / 180.0 ;
     return rad;
 }
-
-
 int main(int argc, char const *argv[])
 {
 
@@ -23,6 +22,11 @@ int main(int argc, char const *argv[])
 
     //Defines a vector consisting of pointers of type "PlantBase"
     std::vector<std::shared_ptr<PlantBase>> greenhouse;
+
+    //Defines a Waterreservoir, for later use in the grow() function.
+    WaterReservoir Reservoir;
+
+    int days = 0;
 
     //Pushes pointer into greenhouse - respresenting tomatos and cucumbers
     float windowHeight = window.getSize().y;
@@ -56,13 +60,25 @@ int main(int argc, char const *argv[])
 
 
         //Create dialog box
-        ImGui::Begin("Hello, world");
+        ImGui::Begin("Greenhouse");
         //Button
-        if (ImGui::Button("GROW THANKS", {200.0, 200.0}))
+        if (ImGui::SliderInt("Days to grow", &days, 0., 10.)){}
+
+        if (ImGui::Button("GROW THANKS", {200.0, 20.0}))
         {
             for (size_t i = 0; i < greenhouse.size(); i++)
-                greenhouse[i]->grow(2);
+                greenhouse[i]->grow(days, Reservoir);
+                std::cout << "Nutrition level er: " << Reservoir.getNutrition() << std::endl;
         }
+
+        if(ImGui::Button("Fill up Water", {200.0, 20.0})){
+            Reservoir.FillUp('w', 100);
+        }
+        
+        if(ImGui::Button("Fill up Nutrition", {200.0, 20.0})){
+            Reservoir.FillUp('n', 100);
+        }
+        
         ImGui::End();
         /**********************************************************************
         *                              Graphics

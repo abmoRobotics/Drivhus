@@ -2,8 +2,9 @@
 #include <vector>
 
 
-void Cucumber::grow(int days){
-    height = height + ( days * growth_rate );
+void Cucumber::grow(int days, WaterReservoir &Reservoir){
+    height = height + ( days * (float)growth_rate * (float)Reservoir.getNutrition());
+    Reservoir.NutritionConsumption(days);
     setSize({5.0,height});
 }
 
