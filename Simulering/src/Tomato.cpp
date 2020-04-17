@@ -1,6 +1,13 @@
 #include <Tomato.h>
 #include <vector>
+#include <math.h>
 
+#define PI 3.14159265
+
+double degtorade(double deg){
+    double rad =  (deg * PI) / 180.0 ;
+    return rad;
+}
 
 void Tomato::grow(int days){
     height = height + ( days * growth_rate );
@@ -11,7 +18,9 @@ void Tomato::grow(int days){
 sf::CircleShape Tomato::fruit(sf::Vector2f offset){
     sf::CircleShape fruit(10.0);
     fruit.setFillColor(sf::Color({240,64,32}));
-    fruit.setPosition(this->getPosition()+offset);
+    sf::Vector2f fruitOffset;
+    fruitOffset.y = -(fruit.getRadius()*2);
+    fruit.setPosition(this->getPosition()+offset+fruitOffset);
     texture.loadFromFile("tomat.png");
     fruit.setTexture(&texture);
     num_tomatoes = num_tomatoes +1.0;
@@ -20,7 +29,7 @@ sf::CircleShape Tomato::fruit(sf::Vector2f offset){
 
 //Shape of the branches on the tomato plant
 sf::RectangleShape Tomato::branch(sf::Vector2f offset,int rotation){
-   sf::RectangleShape branch({5.0,50});
+   sf::RectangleShape branch({3.0,lengthBranch});
    branch.setFillColor(sf::Color({82, 136, 84}));
    branch.setPosition(this->getPosition()+offset);
    branch.setRotation(rotation);
@@ -35,28 +44,31 @@ void Tomato::draw(sf::RenderWindow &window){
     //Direction to draw branch: false = left, true = right
     bool draw_direction = false;
     //For loop respresenting the growth of a tomato "fruit" every 50 centimeters.
-    for (size_t i = 0; i < height; i+=50)
+    for (size_t i = 0; i < height; i+=30)
     {
         //Branch offset from the base of the plant
         sf::Vector2f branchOffset = sf::Vector2f{0.0, -(float)i};
         //Fruit offset from the base of the plant.
         sf::Vector2f fruitOffset;
         int rotatation;
+        
 
         if (draw_direction == false){
-            fruitOffset= sf::Vector2f{18.0,-45-(float)i};
+            fruitOffset= sf::Vector2f{(float)cos(degtorade(45))*(float)lengthBranch-5,-(float)sin(degtorade(45))*lengthBranch-(float)i+5};
             rotatation = -135;
         } else{
-            fruitOffset = sf::Vector2f{18.0-56,-45-(float)i};
+            fruitOffset = sf::Vector2f{(float)-cos(degtorade(45))*(float)lengthBranch+5,-(float)sin(degtorade(45))*lengthBranch-(float)i+5};
             rotatation = 135;
+            sf::CircleShape frutti = fruit(fruitOffset);
+            fruitOffset.x = fruitOffset.x-(frutti.getRadius()*2);
         }
+        sf::CircleShape frutti = fruit(fruitOffset);
         //Invert direction
         draw_direction = !draw_direction;
-        
         //Draw branches on the tomato plant.
         window.draw( branch( branchOffset , rotatation ) );
         //Draw fruits on the tomato plant.
-        window.draw(fruit(fruitOffset));
+        window.draw(frutti);
     }
     
 

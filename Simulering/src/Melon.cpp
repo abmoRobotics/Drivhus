@@ -75,13 +75,11 @@ void Melon::draw(sf::RenderWindow &window)
     //window.draw(fruit(fruitOffset).setTexture());
     //Draw branches on the Melon plant.
     std::vector<sf::RectangleShape> drawBranch = branch(branchOffset, rotatation);
-    window.draw(drawBranch[0]);
-    window.draw(drawBranch[1]);
-
-
-
 
     
+
+    window.draw(drawBranch[0]);
+    window.draw(drawBranch[1]);
 
 }
 
