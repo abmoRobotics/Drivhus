@@ -2,8 +2,9 @@
 #include <vector>
 
 
-void Tomato::grow(int days){
-    height = height + ( days * growth_rate );
+void Tomato::grow(int days, WaterReservoir &Reservoir){
+    height = height + ( days * (float)growth_rate * (float)Reservoir.getNutrition() );
+    Reservoir.NutritionConsumption(days);    
     setSize({5.0,height});
 }
 
@@ -14,7 +15,7 @@ sf::CircleShape Tomato::fruit(sf::Vector2f offset){
     fruit.setPosition(this->getPosition()+offset);
     texture.loadFromFile("tomat.png");
     fruit.setTexture(&texture);
-    num_tomatoes = num_tomatoes +1.0;
+    num_tomatoes = num_tomatoes + 1.0;
     return fruit;
 }
 
