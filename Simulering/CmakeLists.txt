@@ -17,7 +17,8 @@ add_executable(Tomato_example src/Tomato_example.cpp
                              src/Cucumber.cpp
                              src/Melon.cpp
                              src/Graphics.cpp
-                             src/Reservoir.cpp)
+                             src/Reservoir.cpp
+                             src/fruit.cpp)
 
 
 target_link_libraries(Tomato_example sfml-graphics sfml-system ImGui-SFML::ImGui-SFML)

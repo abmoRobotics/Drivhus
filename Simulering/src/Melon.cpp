@@ -11,19 +11,16 @@ void Melon::grow(int days, WaterReservoir &Reservoir)
         Reservoir.NutritionConsumption(days);
         setSize({5.0, heightStalk});
     }
-    
 
-
-    if (radiusMelon < heightStalk/2)
+    if (radiusMelon < heightStalk / 2)
     {
         radiusMelon = radiusMelon + (days * growth_rate);
     }
-
 }
 
 //Shape of the fruits on the Melon plant
 sf::CircleShape Melon::fruit(sf::Vector2f offset)
-{   
+{
 
     sf::CircleShape fruit(radiusMelon);
     //fruit.setFillColor(sf::Color({240, 64, 32}));
@@ -32,9 +29,7 @@ sf::CircleShape Melon::fruit(sf::Vector2f offset)
     fruit.setTexture(&texture);
     num_Melon = num_Melon + 1.0;
 
-
     return fruit;
-    
 }
 
 //Shape of the branches on the Melon plant
@@ -49,9 +44,9 @@ std::vector<sf::RectangleShape> Melon::branch(sf::Vector2f offset, int rotation)
     branch.push_back(branch1);
 
     //gro nedad
-    sf::RectangleShape branch2({5.0, heightStalk-(radiusMelon*2)});
+    sf::RectangleShape branch2({5.0, heightStalk - (radiusMelon * 2)});
     branch2.setFillColor(sf::Color({82, 136, 84}));
-    branch2.setPosition(this->getPosition() + offset + sf::Vector2f(lengthBranch-2.5F,0));
+    branch2.setPosition(this->getPosition() + offset + sf::Vector2f(lengthBranch - 2.5F, 0));
     branch.push_back(branch2);
 
     return branch;
@@ -68,7 +63,7 @@ void Melon::draw(sf::RenderWindow &window)
     //Branch offset from the base of the plant
     sf::Vector2f branchOffset = sf::Vector2f{0.0, -heightStalk};
     //Fruit offset from the base of the plant.
-    sf::Vector2f fruitOffset = sf::Vector2f{lengthBranch-radiusMelon,-(radiusMelon*2)};
+    sf::Vector2f fruitOffset = sf::Vector2f{lengthBranch - radiusMelon, -(radiusMelon * 2)};
     int rotatation = -90;
 
     //Draw fruits on the Melon plant.
@@ -77,11 +72,8 @@ void Melon::draw(sf::RenderWindow &window)
     //Draw branches on the Melon plant.
     std::vector<sf::RectangleShape> drawBranch = branch(branchOffset, rotatation);
 
-    
-
     window.draw(drawBranch[0]);
     window.draw(drawBranch[1]);
-
 }
 
 double Melon::getNumOfFruits()
@@ -99,3 +91,5 @@ Melon::Melon(float x, float y)
     setFillColor(sf::Color({82, 136, 84}));
     setRotation(180);
 }
+
+void Melon::harvest(int x, int y) {}

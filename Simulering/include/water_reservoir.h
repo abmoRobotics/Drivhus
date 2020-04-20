@@ -4,6 +4,7 @@ class WaterReservoir
 {
 public:
     double getNutrition();
+    double getPhosphor() { return Phosphor; };
     double getNutrition(char returnvalue);
     void NutritionConsumption(int days);
     void FillUp(char choise, double level);

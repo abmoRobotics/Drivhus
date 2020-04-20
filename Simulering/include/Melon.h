@@ -2,8 +2,6 @@
 #include "plant_base.h"
 #include "water_reservoir.h"
 
-
-
 class Melon : public PlantBase
 {
 private:
@@ -13,14 +11,15 @@ private:
     double num_Melon = 0.0;
     double growth_rate = 1.0;
     sf::Texture texture;
+
 public:
-   double getHeight() override {return radiusMelon;};
-   double getNumOfFruits() override;
-   void grow(int days, WaterReservoir &Reservoir) override;
-   void draw(sf::RenderWindow &window) override;
-   sf::CircleShape fruit(sf::Vector2f offset) ;
-   std::vector<sf::RectangleShape> branch(sf::Vector2f offset, int rotation) ;
+    double getHeight() override { return radiusMelon; };
+    double getNumOfFruits() override;
+    void harvest(int x, int y) override;
+    void grow(int days, WaterReservoir &Reservoir) override;
+    void draw(sf::RenderWindow &window) override;
+    sf::CircleShape fruit(sf::Vector2f offset);
+    std::vector<sf::RectangleShape> branch(sf::Vector2f offset, int rotation);
 
-    Melon(float,float);
+    Melon(float, float);
 };
-

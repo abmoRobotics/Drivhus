@@ -1,6 +1,7 @@
 #pragma once
 #include "plant_base.h"
 #include "water_reservoir.h"
+#include <fruit.h>
 
 class Tomato : public PlantBase
 {
@@ -11,14 +12,17 @@ private:
     double growth_rate = 5.0;
     float lengthBranch = 20.0;
     sf::Texture texture;
+    std::vector<Fruit> plant_fruit;
+
 public:
-    double getHeight() override {return height;};
+    void add_fruit();
+    void harvest(int x, int y) override;
+    double getHeight() override { return height; };
     double getNumOfFruits() override;
     void grow(int days, WaterReservoir &Reservoir) override;
     void draw(sf::RenderWindow &window) override;
-    sf::CircleShape fruit(sf::Vector2f offset) ;
-    sf::RectangleShape branch(sf::Vector2f offset, int rotation) ;
+    sf::CircleShape fruit(sf::Vector2f offset, Fruit &fruit);
+    sf::RectangleShape branch(sf::Vector2f offset, int rotation);
 
-    Tomato(float,float);
+    Tomato(float, float);
 };
-

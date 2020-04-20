@@ -13,8 +13,8 @@ private:
 
     void standardGraphics();
     void customGraphics();
+
 public:
     Graphics();
     ~Graphics();
 };
-
