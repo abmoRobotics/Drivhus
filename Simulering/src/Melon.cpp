@@ -25,7 +25,7 @@ sf::CircleShape Melon::fruit(sf::Vector2f offset)
     sf::CircleShape fruit(radiusMelon);
     //fruit.setFillColor(sf::Color({240, 64, 32}));
     fruit.setPosition(this->getPosition() + offset);
-    texture.loadFromFile("../Simulering/images/melon.png");
+    texture.loadFromFile("images/melon.png");
     fruit.setTexture(&texture);
     num_Melon = num_Melon + 1.0;
 
