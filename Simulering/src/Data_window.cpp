@@ -4,7 +4,7 @@ void dataWindow(sf::Vector2u pos, WaterReservoir &reservoir, sf::RenderWindow &w
 {
 
         sf::Font font;
-        font.loadFromFile("arial_narrow_7.ttf");
+        font.loadFromFile("../fonts/arial_narrow_7.ttf");
 
         sf::Text text;
         text.setFont(font);

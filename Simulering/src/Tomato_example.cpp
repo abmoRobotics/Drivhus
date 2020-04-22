@@ -46,7 +46,7 @@ int main(int argc, char const *argv[])
     greenhouse.push_back(std::make_unique<Melon>(550.0F - offsetX, windowHeight - 100 - offsetY));
     sf::Clock deltaClock;
 
-    
+
     // run the program as long as the window is open
     while (window.isOpen())
     {
@@ -72,7 +72,7 @@ int main(int argc, char const *argv[])
         float posy{100};
         sf::RectangleShape GreenhouseBack;
         sf::Texture gh;
-        gh.loadFromFile("drivhusBagerst.png");
+        gh.loadFromFile("../images/drivhusBagerst.png");
         GreenhouseBack.setSize({sizegh, sizegh});
         GreenhouseBack.setPosition({posx - offsetX, posy - offsetY});
         GreenhouseBack.setTexture(&gh);
@@ -80,7 +80,7 @@ int main(int argc, char const *argv[])
         //setup greenhouse Front
         sf::RectangleShape GreenhouseFront;
         sf::Texture ghf;
-        ghf.loadFromFile("drivhusForrest.png");
+        ghf.loadFromFile("../images/drivhusForrest.png");
         GreenhouseFront.setSize({sizegh, sizegh});
         GreenhouseFront.setPosition({posx - offsetX, posy - offsetY});
         GreenhouseFront.setTexture(&ghf);
@@ -159,7 +159,7 @@ void dataWindow(sf::Vector2u pos, WaterReservoir &reservoir, sf::RenderWindow &w
     window.draw(rect);
 
     sf::Font font;
-    font.loadFromFile("arial_narrow_7.ttf");
+    font.loadFromFile("../fonts/arial_narrow_7.ttf");
     sf::Text text;
     text.setFont(font);
     text.setCharacterSize(24);
