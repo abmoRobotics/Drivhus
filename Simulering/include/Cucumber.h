@@ -12,7 +12,6 @@ private:
 
 public:
     double getHeight() override { return height; };
-    void harvest(int x, int y) override;
     double getNumOfFruits() override;
     void grow(int days, WaterReservoir &Reservoir) override;
     void draw(sf::RenderWindow &window) override;
@@ -24,4 +23,5 @@ public:
 
     //Constructor
     Cucumber(float, float);
+    void harvest(int x, int y) override;
 };

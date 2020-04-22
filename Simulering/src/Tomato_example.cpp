@@ -46,6 +46,7 @@ int main(int argc, char const *argv[])
     greenhouse.push_back(std::make_unique<Melon>(550.0F - offsetX, windowHeight - 100 - offsetY));
     sf::Clock deltaClock;
 
+    
     // run the program as long as the window is open
     while (window.isOpen())
     {

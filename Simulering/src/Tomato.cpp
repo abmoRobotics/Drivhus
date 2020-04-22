@@ -71,7 +71,6 @@ void Tomato::draw(sf::RenderWindow &window)
     //Direction to draw branch: false = left, true = right
     bool draw_direction = false;
     //For loop respresenting the growth of a tomato "fruit" every 50 centimeters.
-
     for (size_t i = 0; i < plant_fruit.size(); i++)
     {
         //Branch offset from the base of the plant_fruit

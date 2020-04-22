@@ -19,7 +19,7 @@
 BUILD_SHARED_LIBS:BOOL=TRUE
 
 //Choose the type of build (Debug or Release)
-CMAKE_BUILD_TYPE:STRING=Release
+CMAKE_BUILD_TYPE:STRING=Debug
 
 //CXX compiler
 CMAKE_CXX_COMPILER:FILEPATH=C:/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/VC/Tools/MSVC/14.23.28105/bin/Hostx64/x64/cl.exe
