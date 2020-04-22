@@ -46,7 +46,7 @@ sf::CircleShape Tomato::fruit(sf::Vector2f offset, Fruit &fruit)
     fruit_graphics.setPosition(fruitPos);
     fruit.set_xPos(fruitPos.x);
     fruit.set_yPos(fruitPos.y);
-    texture.loadFromFile("../images/tomat.png");
+    texture.loadFromFile("../Simulering/images/tomat.png");
     fruit_graphics.setTexture(&texture);
     num_tomatoes = num_tomatoes + 1.0;
     return fruit_graphics;

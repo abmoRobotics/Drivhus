@@ -72,7 +72,7 @@ int main(int argc, char const *argv[])
         float posy{100};
         sf::RectangleShape GreenhouseBack;
         sf::Texture gh;
-        gh.loadFromFile("../images/drivhusBagerst.png");
+        gh.loadFromFile("../Simulering/images/drivhusBagerst.png");
         GreenhouseBack.setSize({sizegh, sizegh});
         GreenhouseBack.setPosition({posx - offsetX, posy - offsetY});
         GreenhouseBack.setTexture(&gh);
@@ -80,7 +80,7 @@ int main(int argc, char const *argv[])
         //setup greenhouse Front
         sf::RectangleShape GreenhouseFront;
         sf::Texture ghf;
-        ghf.loadFromFile("../images/drivhusForrest.png");
+        ghf.loadFromFile("../Simulering/images/drivhusForrest.png");
         GreenhouseFront.setSize({sizegh, sizegh});
         GreenhouseFront.setPosition({posx - offsetX, posy - offsetY});
         GreenhouseFront.setTexture(&ghf);
@@ -159,7 +159,7 @@ void dataWindow(sf::Vector2u pos, WaterReservoir &reservoir, sf::RenderWindow &w
     window.draw(rect);
 
     sf::Font font;
-    font.loadFromFile("../fonts/arial_narrow_7.ttf");
+    font.loadFromFile("../Simulering/fonts/arial_narrow_7.ttf");
     sf::Text text;
     text.setFont(font);
     text.setCharacterSize(24);

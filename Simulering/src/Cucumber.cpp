@@ -18,7 +18,7 @@ sf::CircleShape Cucumber::fruit(sf::Vector2f offset)
     fruit.setScale(1, 3);
     fruit.setFillColor(sf::Color({32, 64, 32}));
     fruit.setPosition(this->getPosition() + offset);
-    texture.loadFromFile("../images/agurk.png");
+    texture.loadFromFile("../Simulering/images/agurk.png");
     fruit.setTexture(&texture);
     num_cucumber += 1;
     return fruit;
