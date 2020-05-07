@@ -1,3 +1,9 @@
+
+
+
+
+
+
 #include "Tomato.h"
 #include "Cucumber.h"
 #include "Melon.h"
@@ -7,21 +13,24 @@
 #include <math.h>
 
 #define PI 3.14159265
+
+//Define the function "dataWindow" with the given parameters 
 void dataWindow(sf::Vector2u pos, WaterReservoir &reservoir, sf::RenderWindow &window);
 
+//Function to convert from degrees to radians
 double degtorad(double deg)
 {
     double rad = (deg * PI) / 180.0;
     return rad;
 }
+
 int main(int argc, char const *argv[])
 {
-
-    //Hvad er det her
+    //Set a offset for placing objects  
     float offsetX = 300;
     float offsetY = -40;
 
-    // create the window
+    //create the window
     sf::RenderWindow window(sf::VideoMode(1280, 720), "Tomato Simulator");
     window.setFramerateLimit(144);
     ImGui::SFML::Init(window);
@@ -46,16 +55,15 @@ int main(int argc, char const *argv[])
     greenhouse.push_back(std::make_unique<Melon>(550.0F - offsetX, windowHeight - 100 - offsetY));
     sf::Clock deltaClock;
 
-
-    // run the program as long as the window is open
+    //run the program as long as the window is open
     while (window.isOpen())
     {
-        // check all the window's events that were triggered since the last iteration of the loop
+        //check all the window's events that were triggered since the last iteration of the loop
         sf::Event event;
         while (window.pollEvent(event))
         {
             ImGui::SFML::ProcessEvent(event);
-            // "close requested" event: we close the window
+            //"close requested" event: we close the window
             if (event.type == sf::Event::Closed)
                 window.close();
         }
@@ -64,7 +72,7 @@ int main(int argc, char const *argv[])
 
         /**********************************************************************
         *                            Setup green house
-        * *********************************************************************/
+        ***********************************************************************/
 
         //setup greenhouse
         float sizegh{600};
@@ -85,40 +93,50 @@ int main(int argc, char const *argv[])
         GreenhouseFront.setPosition({posx - offsetX, posy - offsetY});
         GreenhouseFront.setTexture(&ghf);
 
-        // clear the window with black color
+        //clear the window with black color
         window.clear(sf::Color::Transparent);
         //window.draw(background);
         window.draw(GreenhouseBack);
 
         /**********************************************************************
         *                             Interface
-        * *********************************************************************/
+        ***********************************************************************/
 
+        //Creates a slider for amount of days 
         if (ImGui::SliderInt("Days to grow", &days, 0., 10.))
         {
         }
-
+        /*
+        When the button is pushed, the program will go through 
+        all elements in the "greenhouse" vector,
+        and runs the grow command based on the slider
+        */
         if (ImGui::Button("GROW THANKS", {200.0, 20.0}))
         {
             for (size_t i = 0; i < greenhouse.size(); i++)
                 greenhouse[i]->grow(days, water_reservoir);
         }
 
+        //Creates a button, that when pressed, fills up the water in the resovoir
         if (ImGui::Button("Fill up Water", {200.0, 20.0}))
         {
             water_reservoir.FillUp('w', 100);
         }
 
+        //When the button is pressed, the nutrition in the resovoir fills up
         if (ImGui::Button("Fill up Nutrition", {200.0, 20.0}))
         {
             water_reservoir.FillUp('n', 100);
         }
-
+        
+        //Experimental button, for when the plants has to grow down
         if (ImGui::Button("GrOw DoWn", {200.0, 20.0}))
         {
             for (size_t i = 0; i < greenhouse.size(); i++)
                 greenhouse[i]->grow(-days, water_reservoir);
         }
+
+        //
         if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
         {
             sf::Vector2i a = sf::Mouse::getPosition(window);
@@ -131,22 +149,28 @@ int main(int argc, char const *argv[])
         /**********************************************************************
         *                              Graphics
         * *********************************************************************/
+        
         sf::Vector2u pos{1000, 50};
         dataWindow(pos, water_reservoir, window);
-
+        /*
+        Takes the elements in the greenhouse vector
+        which contains all the different plants, and runs the
+        draw function, that will render the plants to the greenhouse
+        */
         for (size_t i = 0; i < greenhouse.size(); i++)
         {
             greenhouse[i]->draw(window);
         }
 
         window.draw(GreenhouseFront);
-
+        
         ImGui::SFML::Render(window);
         // end the current frame
         window.display();
     }
 }
 
+//Initializing the function dataWindow
 void dataWindow(sf::Vector2u pos, WaterReservoir &reservoir, sf::RenderWindow &window)
 {
     sf::Vector2f posFloat{(float)pos.x, (float)pos.y};

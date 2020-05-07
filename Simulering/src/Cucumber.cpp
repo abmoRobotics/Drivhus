@@ -3,6 +3,7 @@
 
 void Cucumber::grow(int days, WaterReservoir &Reservoir)
 {
+    //Set the height of the cucumber plant 
     if (height < 250)
     {
         height = height + (days * (float)growth_rate * (float)Reservoir.getNutrition());
