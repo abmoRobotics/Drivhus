@@ -1,7 +1,7 @@
 ## Downloading the project
 **git clone https://github.com/abmoRobotics/Drivhus.git**
 ## Updating submodules
-To run the code the external packages must be downloaded this is done by following the steps listed below:
+To run the code, the required external packages must be downloaded, this is done by following the steps listed below:
 1. Navigate to the drivhus folder (cd drivhus)
 2. git submodule update --init --recursive
 ## Opening and running the project in Visual Studio Code
