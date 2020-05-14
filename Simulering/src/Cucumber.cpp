@@ -72,23 +72,25 @@ void Cucumber::draw(sf::RenderWindow &window)
         //Fruit offset from the base of the plant.
         sf::Vector2f fruitOffset;
         int rotatation;
-
+        //Set fruit paremeters depending on drawdirection(Left or right fruit)
         if (draw_direction == false)
         {
-            fruitOffset = sf::Vector2f{(float)cos(degtorade(45)) * (float)lengthBranch - 15, -(float)sin(degtorade(45)) * lengthBranch - ((float)i * 50) + 5};
+            fruitOffset = sf::Vector2f{(float)cos(degtorade(45)) * (float)lengthBranch - 5, -(float)sin(degtorade(45)) * lengthBranch - ((float)i * 50) + 5};
             rotatation = -135;
+            sf::CircleShape frutti = fruit(fruitOffset, plant_fruit[i]);
+            fruitOffset.x = fruitOffset.x - (frutti.getRadius());
         }
         else
         {
-            fruitOffset = sf::Vector2f{(float)-cos(degtorade(45)) * (float)lengthBranch + 10, -(float)sin(degtorade(45)) * lengthBranch - ((float)i * 50) + 5};
+            fruitOffset = sf::Vector2f{(float)-cos(degtorade(45)) * (float)lengthBranch + 0, -(float)sin(degtorade(45)) * lengthBranch - ((float)i * 50) + 5};
             rotatation = 135;
             sf::CircleShape frutti = fruit(fruitOffset, plant_fruit[i]);
-            fruitOffset.x = fruitOffset.x - (frutti.getRadius() * 2);
+            fruitOffset.x = fruitOffset.x - (frutti.getRadius());
         }
         sf::CircleShape frutti = fruit(fruitOffset, plant_fruit[i]);
         //Invert direction
         draw_direction = !draw_direction;
-        //Draw fruits on the tomato plant.
+        //Draw fruits on the cucumber plant.
         window.draw(branch(branchOffset, rotatation));
         window.draw(frutti);
     }

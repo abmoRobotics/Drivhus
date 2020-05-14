@@ -1,9 +1,3 @@
-
-
-
-
-
-
 #include "Tomato.h"
 #include "Cucumber.h"
 #include "Melon.h"
@@ -130,13 +124,15 @@ int main(int argc, char const *argv[])
         }
         
         //Experimental button, for when the plants has to grow down
-        if (ImGui::Button("GrOw DoWn", {200.0, 20.0}))
+        if (ImGui::Button("Grow Down[Experimental]", {200.0, 20.0}))
         {
             for (size_t i = 0; i < greenhouse.size(); i++)
                 greenhouse[i]->grow(-days, water_reservoir);
         }
 
-        //
+        /*
+        If the left mouse button is clicked, run the harvest function
+        (only implemented in Tomato class) */
         if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
         {
             sf::Vector2i a = sf::Mouse::getPosition(window);
@@ -145,7 +141,7 @@ int main(int argc, char const *argv[])
                 i->harvest((int)a.x, (int)a.y);
             }
         }
-        //ImGui::End();
+
         /**********************************************************************
         *                              Graphics
         * *********************************************************************/
@@ -173,6 +169,7 @@ int main(int argc, char const *argv[])
 //Initializing the function dataWindow
 void dataWindow(sf::Vector2u pos, WaterReservoir &reservoir, sf::RenderWindow &window)
 {
+    //Draw a square/border around the data window
     sf::Vector2f posFloat{(float)pos.x, (float)pos.y};
     sf::RectangleShape rect;
     rect.setSize({200.0F, 300.0F});
@@ -182,41 +179,42 @@ void dataWindow(sf::Vector2u pos, WaterReservoir &reservoir, sf::RenderWindow &w
     rect.setPosition(posFloat);
     window.draw(rect);
 
+    //Draw "levels" text in data window
     sf::Font font;
     font.loadFromFile("fonts/arial_narrow_7.ttf");
     sf::Text text;
     text.setFont(font);
     text.setCharacterSize(24);
     text.setFillColor(sf::Color::Green);
-
     text.setString("Levels");
     text.setPosition(pos.x + 70, pos.y + 10);
     window.draw(text);
-    const std::vector<char> letters = {'W', 'K', 'P', 'N'};
 
+    //Draw level indicators and letter
+    const std::vector<char> letters = {'W', 'K', 'P', 'N'};
     for (int i = 0; i < letters.size(); i++)
     {
+        //Set offset from left side of datawindow
         int offset = 45;
+        //Set spacing between level indicators
         int spacing = 40;
+
+        //Draw letter
         text.setString(letters[i]);
         text.setPosition(pos.x + offset + (spacing * i) - text.getLocalBounds().width, pos.y + 70);
         window.draw(text);
+
+        //Draw outer shape of level indicator
         sf::RectangleShape outerShape;
         outerShape.setSize({21.0F, 153.0F});
         outerShape.setPosition(pos.x + offset + (spacing * i) - text.getLocalBounds().width / 2 - outerShape.getGlobalBounds().width / 2, pos.y + 110);
         window.draw(outerShape);
+
+        //Draw inner shape of level indicator
         sf::RectangleShape innerShape;
         innerShape.setFillColor(sf::Color::Blue);
         innerShape.setSize({15.0F, 147.0F * ((float)reservoir.getNutrition(letters[i])) / 100.0F});
         innerShape.setPosition(pos.x + offset + (spacing * i) - text.getLocalBounds().width / 2 - innerShape.getGlobalBounds().width / 2, pos.y + 113 + 147 - innerShape.getGlobalBounds().height);
         window.draw(innerShape);
     }
-
-    /*     sf::Vector2i a = sf::Mouse::getPosition(window);
-    text.setString(std::to_string(a.x));
-    text.setPosition(100, 100);
-    window.draw(text);
-    text.setString(std::to_string(a.y));
-    text.setPosition(150, 100);
-    window.draw(text); */
 }
