@@ -12,5 +12,5 @@ All folder and files are to be ignored except "Simulering" and "SSP".
 In "SSP" you will find all the relevant documents. 
 The folder "Simulering" contains all documents that are related to the programing. 
 The file ".vscode" contains the launch file. 
-"include" and "libs" contains header filee. The "include" folder contains header files created by us and "libs" contains headers fildes from Imgui and SFML. 
+"include" and "libs" contains header file. The "include" folder contains header files created by us and "libs" contains headers fildes from Imgui and SFML. 
 Lastly the "src" folder contains all the cpp files. 
