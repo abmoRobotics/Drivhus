@@ -1,7 +1,7 @@
 ## Downloading the project
 **git clone https://github.com/abmoRobotics/Drivhus.git**
 ## Updating submodules
-1. cd Drivhus
+1. Navigate to the drivhus folder (cd drivhus)
 2. git submodule update --init --recursive
 ## Opening and running the project in Visual Studio Code
 1. Open project with root in "\Drivhus".
