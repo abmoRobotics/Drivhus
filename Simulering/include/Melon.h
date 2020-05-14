@@ -22,9 +22,13 @@ public:
     void harvest(int x, int y) override;
     void grow(int days, WaterReservoir &Reservoir) override;
     void draw(sf::RenderWindow &window) override;
+    
+    //Function that return the shape of the fruit
     sf::CircleShape fruit(sf::Vector2f offset);
+    //Function that return the shape of the branch
     std::vector<sf::RectangleShape> branch(sf::Vector2f offset, int rotation);
 
+    //Constructor
     Melon(float, float);
 };
  

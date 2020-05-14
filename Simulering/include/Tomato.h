@@ -23,7 +23,10 @@ public:
     double getNumOfFruits() override;
     void grow(int days, WaterReservoir &Reservoir) override;
     void draw(sf::RenderWindow &window) override;
+    
+    //Function that return the shape of the fruit
     sf::CircleShape fruit(sf::Vector2f offset, Fruit &fruit);
+    //Function that return the shape of the branch
     sf::RectangleShape branch(sf::Vector2f offset, int rotation);
 
     Tomato(float, float);

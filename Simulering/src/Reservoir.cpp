@@ -1,5 +1,6 @@
 #include <water_reservoir.h>
 
+//Returns the growtrate if 0 input parameters
 double WaterReservoir::getNutrition()
 {
     if (Water > 10 && Nitrogen > 10 && Kalium > 10)
@@ -15,6 +16,7 @@ double WaterReservoir::getNutrition()
     return nutrition_growth_rate;
 };
 
+//Returns the rate of N, P, K or water if 1 input parameter
 double WaterReservoir::getNutrition(char returnvalue)
 {
     switch (returnvalue)
@@ -37,6 +39,7 @@ double WaterReservoir::getNutrition(char returnvalue)
     }
 };
 
+//Function for consuming Nutrition
 void WaterReservoir::NutritionConsumption(int days)
 {
     if (Nitrogen - 0.25 * days > 0)
@@ -76,6 +79,7 @@ void WaterReservoir::NutritionConsumption(int days)
     }
 };
 
+//Function fot filling up nutrition
 void WaterReservoir::FillUp(char choise, double level)
 {
     switch (choise)

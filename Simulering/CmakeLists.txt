@@ -16,6 +16,7 @@ add_executable(Greenhouse src/Greenhouse.cpp
                              src/Tomato.cpp
                              src/Cucumber.cpp
                              src/Melon.cpp
+                             src/Data_window.cpp
                              src/Graphics.cpp
                              src/Reservoir.cpp
                              src/fruit.cpp)

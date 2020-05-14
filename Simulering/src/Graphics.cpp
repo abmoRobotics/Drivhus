@@ -2,7 +2,6 @@
 
 Graphics::Graphics() : window(sf::VideoMode(1280, 720), "Tomato Simulator")
 {
-
     greenhouse.push_back(std::make_shared<Tomato>(100.0F, 720.0F));
     greenhouse.push_back(std::make_shared<Tomato>(200.0F, 720.0F));
     greenhouse.push_back(std::make_shared<Cucumber>(300.0F, 720.0F));

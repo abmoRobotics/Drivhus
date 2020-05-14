@@ -1,7 +1,7 @@
 #include <Cucumber.h>
 #include <vector>
 
-
+//This function is called when a day passes
 void Cucumber::grow(int days, WaterReservoir &Reservoir)
 {
     //Set the height of the cucumber plant 
@@ -11,7 +11,8 @@ void Cucumber::grow(int days, WaterReservoir &Reservoir)
         Reservoir.NutritionConsumption(days);
         setSize({5.0, height});
     }
-     //add a fruit for every 50
+    
+    //add a fruit for every 50
     if (plant_fruit.size() < ((int)height / 50))
     {
         Fruit t;
@@ -24,7 +25,6 @@ void Cucumber::grow(int days, WaterReservoir &Reservoir)
         a_fruit.grow_fruit(days, Reservoir);
     }
 }
-
 
 //Shape of the fruits on the cucumber plant
 sf::CircleShape Cucumber::fruit(sf::Vector2f offset, Fruit &fruit)
@@ -104,14 +104,19 @@ double Cucumber::getNumOfFruits()
 Cucumber::Cucumber(float x, float y)
 {
     setPosition(sf::Vector2f{x, y});
+    //Define a starting height of the plant
     height = 50.0;
+    //Place a fruit every X centimeter
      for (size_t i = 0; i < ((int)height / 30); i++)
     {
         Fruit fruit;
         plant_fruit.push_back(fruit);
     }
+    //Set the size of the stalk
     setSize({5.0, height});
+    //Set the color of the stalk
     setFillColor(sf::Color({82, 136, 84}));
+    //Set the rotation of the stalk.
     setRotation(180);
 }
 

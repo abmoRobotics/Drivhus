@@ -4,6 +4,7 @@
 
 void Melon::grow(int days, WaterReservoir &Reservoir)
 {
+    //Set the height of the melon plant 
     if (heightStalk < 75 && Reservoir.getPhosphor() > 30)
     {
         heightStalk = heightStalk + (days * (float)growth_rate * (float)Reservoir.getNutrition());
@@ -12,6 +13,7 @@ void Melon::grow(int days, WaterReservoir &Reservoir)
         setSize({5.0, heightStalk});
     }
 
+    //grow fruit if enough nutrition is present
     if (radiusMelon < heightStalk / 2 && Reservoir.getPhosphor() > 30)
     {
         radiusMelon = radiusMelon + (days * growth_rate);
@@ -35,7 +37,7 @@ sf::CircleShape Melon::fruit(sf::Vector2f offset)
 //Shape of the branches on the Melon plant
 std::vector<sf::RectangleShape> Melon::branch(sf::Vector2f offset, int rotation)
 {
-    //gro vandret
+    //grow horizontal
     std::vector<sf::RectangleShape> branch;
     sf::RectangleShape branch1({5.0, lengthBranch});
     branch1.setFillColor(sf::Color({82, 136, 84}));
@@ -43,7 +45,7 @@ std::vector<sf::RectangleShape> Melon::branch(sf::Vector2f offset, int rotation)
     branch1.setRotation(rotation);
     branch.push_back(branch1);
 
-    //gro nedad
+    //grow vertical
     sf::RectangleShape branch2({5.0, heightStalk - (radiusMelon * 2)});
     branch2.setFillColor(sf::Color({82, 136, 84}));
     branch2.setPosition(this->getPosition() + offset + sf::Vector2f(lengthBranch - 2.5F, 0));

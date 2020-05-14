@@ -1,7 +1,6 @@
 #include <Tomato.h>
 
 
-
 //This function is called when a day passes
 void Tomato::grow(int days, WaterReservoir &Reservoir)
 {
@@ -70,7 +69,7 @@ void Tomato::draw(sf::RenderWindow &window)
         //Fruit offset from the base of the plant_fruit.
         sf::Vector2f fruitOffset;
         int rotatation;
-
+        //Set fruit paremeters depending on drawdirection(Left or right fruit)
         if (draw_direction == false)
         {
             fruitOffset = sf::Vector2f{(float)cos(degtorade(45)) * (float)lengthBranch - 5, -(float)sin(degtorade(45)) * lengthBranch - ((float)i * 30) + 5};
@@ -104,7 +103,7 @@ Tomato::Tomato(float x, float y)
     setPosition(sf::Vector2f{x, y});
     //Define a starting height of the plant
     height = 98.0;
-    //Place a fruit every 50 centimeter
+    //Place a fruit every X centimeter
     for (size_t i = 0; i < ((int)height / 50); i++)
     {
         Fruit fruit;
