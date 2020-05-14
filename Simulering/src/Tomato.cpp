@@ -1,14 +1,6 @@
 #include <Tomato.h>
-#include <vector>
-#include <math.h>
 
-#define PI 3.14159265
 
-double degtorade(double deg)
-{
-    double rad = (deg * PI) / 180.0;
-    return rad;
-}
 
 //This function is called when a day passes
 void Tomato::grow(int days, WaterReservoir &Reservoir)
@@ -112,8 +104,8 @@ Tomato::Tomato(float x, float y)
     setPosition(sf::Vector2f{x, y});
     //Define a starting height of the plant
     height = 98.0;
-    //Place a fruit every 30 centimeter
-    for (size_t i = 0; i < ((int)height / 30); i++)
+    //Place a fruit every 50 centimeter
+    for (size_t i = 0; i < ((int)height / 50); i++)
     {
         Fruit fruit;
         plant_fruit.push_back(fruit);

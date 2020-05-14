@@ -4,7 +4,7 @@
 
 void Melon::grow(int days, WaterReservoir &Reservoir)
 {
-    if (heightStalk < 75)
+    if (heightStalk < 75 && Reservoir.getPhosphor() > 30)
     {
         heightStalk = heightStalk + (days * (float)growth_rate * (float)Reservoir.getNutrition());
         lengthBranch = lengthBranch + (days * (float)growth_rate * (float)Reservoir.getNutrition());
@@ -12,7 +12,7 @@ void Melon::grow(int days, WaterReservoir &Reservoir)
         setSize({5.0, heightStalk});
     }
 
-    if (radiusMelon < heightStalk / 2)
+    if (radiusMelon < heightStalk / 2 && Reservoir.getPhosphor() > 30)
     {
         radiusMelon = radiusMelon + (days * growth_rate);
     }

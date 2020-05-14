@@ -2,6 +2,8 @@
 #include "plant_base.h"
 #include "water_reservoir.h"
 #include <fruit.h>
+#include <vector>
+#include <math.h>
 
 class Tomato : public PlantBase
 {

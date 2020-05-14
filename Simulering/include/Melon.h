@@ -3,6 +3,8 @@
 #pragma once
 #include "plant_base.h"
 #include "water_reservoir.h"
+#include <fruit.h>
+#include <vector>
 
 class Melon : public PlantBase
 {

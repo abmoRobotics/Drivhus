@@ -1,6 +1,7 @@
 #include <Cucumber.h>
 #include <vector>
 
+
 void Cucumber::grow(int days, WaterReservoir &Reservoir)
 {
     //Set the height of the cucumber plant 
@@ -10,25 +11,42 @@ void Cucumber::grow(int days, WaterReservoir &Reservoir)
         Reservoir.NutritionConsumption(days);
         setSize({5.0, height});
     }
+     //add a fruit for every 50
+    if (plant_fruit.size() < ((int)height / 50))
+    {
+        Fruit t;
+        plant_fruit.push_back(t);
+    }
+
+    //grow fruit if enough nutrition is present
+    for (auto &a_fruit : plant_fruit)
+    {
+        a_fruit.grow_fruit(days, Reservoir);
+    }
 }
 
+
 //Shape of the fruits on the cucumber plant
-sf::CircleShape Cucumber::fruit(sf::Vector2f offset)
+sf::CircleShape Cucumber::fruit(sf::Vector2f offset, Fruit &fruit)
 {
-    sf::CircleShape fruit(13.0);
-    fruit.setScale(1, 3);
-    fruit.setFillColor(sf::Color({32, 64, 32}));
-    fruit.setPosition(this->getPosition() + offset);
+    sf::CircleShape fruit_graphics(fruit.get_size());
+    fruit_graphics.setScale(1, 3);
+    fruit_graphics.setFillColor(sf::Color({32, 64, 32}));
+
+    sf::Vector2f fruitOffset;
+    fruitOffset.y = -(fruit_graphics.getRadius() * 2);
+
+    fruit_graphics.setPosition(this->getPosition() + offset + fruitOffset);
     texture.loadFromFile("images/agurk.png");
-    fruit.setTexture(&texture);
+    fruit_graphics.setTexture(&texture);
     num_cucumber += 1;
-    return fruit;
+    return fruit_graphics;
 }
 
 //Shape of the branches on the cucumber plant
 sf::RectangleShape Cucumber::branch(sf::Vector2f offset, int rotation)
 {
-    sf::RectangleShape branch({5.0, 50});
+    sf::RectangleShape branch({5.0, lengthBranch});
     branch.setFillColor(sf::Color({82, 136, 84}));
     branch.setPosition(this->getPosition() + offset);
     branch.setRotation(rotation);
@@ -46,30 +64,33 @@ void Cucumber::draw(sf::RenderWindow &window)
     //Direction to draw branch: false = left, true = right
     bool draw_direction = false;
     //For loop respresenting the growth of a tomato "fruit" every 50 centimeters.
-    for (size_t i = 0; i < height; i += 50)
+    for (size_t i = 0; i < plant_fruit.size(); i ++)
     {
 
         //Branch offset from the base of the plant
-        sf::Vector2f branchOffset = sf::Vector2f{0.0, -(float)i};
+        sf::Vector2f branchOffset = sf::Vector2f{0.0, -(float)i*50};
         //Fruit offset from the base of the plant.
         sf::Vector2f fruitOffset;
         int rotatation;
 
         if (draw_direction == false)
         {
-            fruitOffset = sf::Vector2f{18.0, -45 - (float)i};
+            fruitOffset = sf::Vector2f{(float)cos(degtorade(45)) * (float)lengthBranch - 15, -(float)sin(degtorade(45)) * lengthBranch - ((float)i * 50) + 5};
             rotatation = -135;
         }
         else
         {
-            fruitOffset = sf::Vector2f{18.0 - 56, -45 - (float)i};
+            fruitOffset = sf::Vector2f{(float)-cos(degtorade(45)) * (float)lengthBranch + 10, -(float)sin(degtorade(45)) * lengthBranch - ((float)i * 50) + 5};
             rotatation = 135;
+            sf::CircleShape frutti = fruit(fruitOffset, plant_fruit[i]);
+            fruitOffset.x = fruitOffset.x - (frutti.getRadius() * 2);
         }
+        sf::CircleShape frutti = fruit(fruitOffset, plant_fruit[i]);
         //Invert direction
         draw_direction = !draw_direction;
         //Draw fruits on the tomato plant.
         window.draw(branch(branchOffset, rotatation));
-        window.draw(fruit(fruitOffset));
+        window.draw(frutti);
     }
 }
 
@@ -82,6 +103,11 @@ Cucumber::Cucumber(float x, float y)
 {
     setPosition(sf::Vector2f{x, y});
     height = 50.0;
+     for (size_t i = 0; i < ((int)height / 30); i++)
+    {
+        Fruit fruit;
+        plant_fruit.push_back(fruit);
+    }
     setSize({5.0, height});
     setFillColor(sf::Color({82, 136, 84}));
     setRotation(180);
