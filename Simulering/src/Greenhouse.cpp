@@ -32,6 +32,9 @@ int main(int argc, char const *argv[])
     float windowHeight = window.getSize().y;
     float windowLength = window.getSize().x;
 
+
+
+
     //variable for slider
     int days = 1;
     //Defines a Waterreservoir, for later use in the grow() function.
@@ -68,6 +71,14 @@ int main(int argc, char const *argv[])
         *                            Setup green house
         ***********************************************************************/
 
+        //Setup background
+        sf::RectangleShape background;
+        sf::Texture bg;
+        bg.loadFromFile("images/background.png");
+        background.setSize({windowLength,windowHeight});
+        background.setPosition({0, 0});
+        background.setTexture(&bg);
+        
         //setup greenhouse
         float sizegh{600};
         float posx = (windowLength - sizegh) / 2;
@@ -89,8 +100,9 @@ int main(int argc, char const *argv[])
 
         //clear the window with black color
         window.clear(sf::Color::Transparent);
-        //window.draw(background);
+        window.draw(background);
         window.draw(GreenhouseBack);
+        
 
         /**********************************************************************
         *                             Interface
