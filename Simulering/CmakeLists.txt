@@ -17,9 +17,8 @@ add_executable(Greenhouse src/Greenhouse.cpp
                              src/Cucumber.cpp
                              src/Melon.cpp
                              src/Data_window.cpp
-                             src/Graphics.cpp
                              src/Reservoir.cpp
                              src/fruit.cpp)
 
-
+                             
 target_link_libraries(Greenhouse sfml-graphics sfml-system ImGui-SFML::ImGui-SFML)

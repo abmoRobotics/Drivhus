@@ -29,14 +29,21 @@ void Tomato::grow(int days, WaterReservoir &Reservoir)
 //Shape of the fruits on the tomato plant
 sf::CircleShape Tomato::fruit(sf::Vector2f offset, Fruit &fruit)
 {
+    //Define the shape of the figure
     sf::CircleShape fruit_graphics(fruit.get_size());
     fruit_graphics.setFillColor(sf::Color({240, 64, 32}));
+
+    //Offset to make sure that the tomato is centered 
     sf::Vector2f fruitOffset;
     fruitOffset.y = -(fruit_graphics.getRadius() * 2);
     sf::Vector2f fruitPos = this->getPosition() + offset + fruitOffset;
     fruit_graphics.setPosition(fruitPos);
+
+    //Set the x position and y position of the fruit in the object
     fruit.set_xPos(fruitPos.x);
     fruit.set_yPos(fruitPos.y);
+
+    //Load tomato texture
     texture.loadFromFile("images/tomat.png");
     fruit_graphics.setTexture(&texture);
     num_tomatoes = num_tomatoes + 1.0;
@@ -79,16 +86,18 @@ void Tomato::draw(sf::RenderWindow &window)
         {
             fruitOffset = sf::Vector2f{(float)-cos(degtorade(45)) * (float)lengthBranch + 5, -(float)sin(degtorade(45)) * lengthBranch - ((float)i * 30) + 5};
             rotatation = 135;
-            sf::CircleShape frutti = fruit(fruitOffset, plant_fruit[i]);
-            fruitOffset.x = fruitOffset.x - (frutti.getRadius() * 2);
+            //Offset to make sure that the tomato is centered (when size increases)
+            sf::CircleShape fruit_graphics = fruit(fruitOffset, plant_fruit[i]);
+            fruitOffset.x = fruitOffset.x - (fruit_graphics.getRadius() * 2);
         }
-        sf::CircleShape frutti = fruit(fruitOffset, plant_fruit[i]);
+        //Define the fruit graphics again, but now it is centered depending on its size.
+        sf::CircleShape fruit_graphics = fruit(fruitOffset, plant_fruit[i]);
         //Invert direction
         draw_direction = !draw_direction;
         //Draw branches on the tomato plant.
         window.draw(branch(branchOffset, rotatation));
         //Draw fruits on the tomato plant.
-        window.draw(frutti);
+        window.draw(fruit_graphics);
     }
 }
 

@@ -29,14 +29,17 @@ void Cucumber::grow(int days, WaterReservoir &Reservoir)
 //Shape of the fruits on the cucumber plant
 sf::CircleShape Cucumber::fruit(sf::Vector2f offset, Fruit &fruit)
 {
+    //Define the shape of the figure
     sf::CircleShape fruit_graphics(fruit.get_size());
     fruit_graphics.setScale(1, 3);
     fruit_graphics.setFillColor(sf::Color({32, 64, 32}));
 
+    //Offset to make sure that the cucumber is centered (when size increases)
     sf::Vector2f fruitOffset;
     fruitOffset.y = -(fruit_graphics.getRadius() * 2);
-
     fruit_graphics.setPosition(this->getPosition() + offset + fruitOffset);
+
+    //Load cucumber texture
     texture.loadFromFile("images/agurk.png");
     fruit_graphics.setTexture(&texture);
     num_cucumber += 1;
@@ -77,22 +80,25 @@ void Cucumber::draw(sf::RenderWindow &window)
         {
             fruitOffset = sf::Vector2f{(float)cos(degtorade(45)) * (float)lengthBranch - 5, -(float)sin(degtorade(45)) * lengthBranch - ((float)i * 50) + 5};
             rotatation = -135;
-            sf::CircleShape frutti = fruit(fruitOffset, plant_fruit[i]);
-            fruitOffset.x = fruitOffset.x - (frutti.getRadius());
+            //Offset to make sure that the cucumber is centered (when size increases)
+            sf::CircleShape fruit_graphic = fruit(fruitOffset, plant_fruit[i]);
+            fruitOffset.x = fruitOffset.x - (fruit_graphic.getRadius());
         }
         else
         {
             fruitOffset = sf::Vector2f{(float)-cos(degtorade(45)) * (float)lengthBranch + 0, -(float)sin(degtorade(45)) * lengthBranch - ((float)i * 50) + 5};
             rotatation = 135;
-            sf::CircleShape frutti = fruit(fruitOffset, plant_fruit[i]);
-            fruitOffset.x = fruitOffset.x - (frutti.getRadius());
+            //Offset to make sure that the cucumber is centered (when size increases)
+            sf::CircleShape fruit_graphic = fruit(fruitOffset, plant_fruit[i]);
+            fruitOffset.x = fruitOffset.x - (fruit_graphic.getRadius());
         }
-        sf::CircleShape frutti = fruit(fruitOffset, plant_fruit[i]);
+        //Define the fruit graphics again, but now it is centered depending on its size.
+        sf::CircleShape fruit_graphic = fruit(fruitOffset, plant_fruit[i]);
         //Invert direction
         draw_direction = !draw_direction;
         //Draw fruits on the cucumber plant.
         window.draw(branch(branchOffset, rotatation));
-        window.draw(frutti);
+        window.draw(fruit_graphic);
     }
 }
 

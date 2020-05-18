@@ -1,7 +1,6 @@
 #include "Tomato.h"
 #include "Cucumber.h"
 #include "Melon.h"
-#include "graphics.h"
 #include <iostream>
 #include "water_reservoir.h"
 #include <math.h>
@@ -31,9 +30,6 @@ int main(int argc, char const *argv[])
 
     float windowHeight = window.getSize().y;
     float windowLength = window.getSize().x;
-
-
-
 
     //variable for slider
     int days = 1;
