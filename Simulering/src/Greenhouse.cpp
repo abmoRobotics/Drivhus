@@ -117,7 +117,7 @@ int main(int argc, char const *argv[])
         all elements in the "greenhouse" vector,
         and runs the grow command based on the slider
         */
-        if (ImGui::Button("GROW THANKS", {200.0, 20.0}))
+        if (ImGui::Button("Simulate growth", {200.0, 20.0}))
         {
             for (size_t i = 0; i < greenhouse.size(); i++)
                 greenhouse[i]->grow(days, water_reservoir);
@@ -135,12 +135,12 @@ int main(int argc, char const *argv[])
             water_reservoir.FillUp('n', 100);
         }
         
-        //Experimental button, for when the plants has to grow down
-        if (ImGui::Button("Grow Down[Experimental]", {200.0, 20.0}))
+        //Experimental button, for when the plants has to grow down for testing
+        /* if (ImGui::Button("Grow Down[Experimental]", {200.0, 20.0}))
         {
             for (size_t i = 0; i < greenhouse.size(); i++)
                 greenhouse[i]->grow(-days, water_reservoir);
-        }
+        } */
 
         /*
         If the left mouse button is clicked, run the harvest function

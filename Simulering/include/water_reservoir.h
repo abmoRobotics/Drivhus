@@ -13,6 +13,6 @@ private:
     double Nitrogen{100};
     double Phosphor{70};
     double Kalium{100};
-    double Water{70};
+    double Water{60};
     double nutrition_growth_rate = 0;
 };

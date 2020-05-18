@@ -7,7 +7,7 @@ void dataWindow(sf::Vector2u pos, WaterReservoir &reservoir, sf::RenderWindow &w
     sf::Vector2f posFloat{(float)pos.x, (float)pos.y};
     sf::RectangleShape rect;
     rect.setSize({200.0F, 300.0F});
-    rect.setFillColor(sf::Color::Transparent);
+    rect.setFillColor(sf::Color::Black);
     rect.setOutlineColor(sf::Color::White);
     rect.setOutlineThickness(5.0F);
     rect.setPosition(posFloat);

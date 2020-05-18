@@ -69,7 +69,7 @@ void WaterReservoir::NutritionConsumption(int days)
         Kalium = 0;
     }
 
-    if (Water - 0.4 * days > 0)
+    if (Water - 0.6 * days > 0)
     {
         Water = Water - 0.4 * days;
     }
